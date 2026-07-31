@@ -1,0 +1,18 @@
+﻿{
+    "product":  "VCore Pulse",
+    "version":  "2.0.0",
+    "build":  "2026.07.30-rc.2",
+    "generatedAt":  "2026-07-30T22:19:40.9064580Z",
+    "artifacts":  [
+                      {
+                          "file":  "VCorePulse2.0.exe",
+                          "bytes":  40532501,
+                          "sha256":  "54ad6df3106114c853141b4380f09fdacc07a5b52b332df81181de72301ad873"
+                      },
+                      {
+                          "file":  "VCorePulse2.0.sh",
+                          "bytes":  49878948,
+                          "sha256":  "d30fe60833f74fd50334b0d0df2d9df1ec3f9a059c3797e6912e18b576c0618b"
+                      }
+                  ]
+}
