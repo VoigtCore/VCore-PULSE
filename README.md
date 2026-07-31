@@ -1,101 +1,244 @@
 # VCore Pulse 2.0
 
-![VCore Pulse — Saúde Operacional Digital](screenshots/vcore-pulse.png)
+<p align="center">
+
+![VCore Pulse](screenshots/vcore-pulse.png)
+
+</p>
+
+<p align="center">
 
 [![Status](https://img.shields.io/badge/status-Public%20Beta-f0b45a)](ROADMAP.md)
 [![Version](https://img.shields.io/badge/version-2.0%20RC2-67efbc)](CHANGELOG.md)
-[![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-1674cf)](#instalação)
-[![Linux](https://img.shields.io/badge/Linux-x64-f5a623)](#instalação)
+[![Windows](https://img.shields.io/badge/Windows-10%20|%2011-1674cf)](#installation)
+[![Linux](https://img.shields.io/badge/Linux-x64-f5a623)](#installation)
 
-**Digital Operational Health**
+</p>
 
-O VCore Pulse é um Sistema de Gestão da Saúde Operacional Digital. Em vez de apresentar apenas métricas isoladas, ele interpreta a identidade, o ritmo e a trajetória temporal de cada máquina.
+# Digital Operational Health
 
-## Download
+VCore Pulse é uma plataforma de **Runtime Intelligence** e **Saúde Operacional Digital**.
 
-| Plataforma | Pacote |
-|---|---|
-| Windows 10/11 x64 | [Baixar VCorePulse2.0.exe](https://github.com/VoigtCore/VCore-PULSE/raw/main/releases/VCorePulse2.0.exe) |
-| Linux x64 | [Baixar VCorePulse2.0.sh](https://github.com/VoigtCore/VCore-PULSE/raw/main/releases/VCorePulse2.0.sh) |
+Ao invés de observar apenas CPU, memória, disco ou rede em um determinado instante, o Pulse interpreta a **trajetória operacional** de cada computador ao longo do tempo.
 
-Confira a integridade dos arquivos em [SHA256SUMS.txt](releases/SHA256SUMS.txt).
+Cada máquina desenvolve sua própria identidade operacional.
 
-## Status
+O objetivo não é monitorar recursos.
 
-### 🟡 Public Beta
+O objetivo é compreender o comportamento computacional.
 
-Esta versão é destinada a testes públicos. Durante as próximas semanas será realizada a calibração científica contínua do algoritmo de Saúde Operacional através do Baseline Estrutural Temporal.
+---
 
-Feedbacks são bem-vindos em [rafael@voigtcore.com.br](mailto:rafael@voigtcore.com.br) ou nas [Issues](https://github.com/VoigtCore/VCore-PULSE/issues).
+# Download
 
-## Principais recursos
+## Windows
 
-- **Integridade:** distância entre o estado atual e a identidade operacional aprendida.
-- **Elasticidade:** margem disponível para absorver mudanças.
-- **Resiliência:** capacidade de recuperação após impactos.
-- **Entropia:** grau de variabilidade e imprevisibilidade operacional.
-- **Linha da Vida:** eventos interpretados com data, hora, turno e contexto.
-- **Story:** resumo executivo da trajetória da máquina.
-- **Telegram:** painel remoto com estado, Story, Linha da Vida e relatórios.
-- **Relatórios:** exportações PDF, CSV e JSON.
-- **Diagnóstico:** pacote seguro para atendimento de suporte.
-- **Trial e licenciamento:** dez dias gratuitos, ativação e renovação pelo VCore Commerce.
+⬇ **Download (sempre última versão)**
 
-## Capturas
+https://github.com/VoigtCore/VCore-PULSE/releases/latest/download/VCorePulse2.0.exe
 
-### Centro Executivo de Saúde Operacional
+---
 
-![Dashboard do VCore Pulse](screenshots/dashboard.png)
+## Linux
 
-### Linha da Vida
+⬇ **Download (sempre última versão)**
 
-![Linha da Vida](screenshots/timeline.png)
+https://github.com/VoigtCore/VCore-PULSE/releases/latest/download/VCorePulse2.0.sh
+
+---
+
+## Todas as versões
+
+https://github.com/VoigtCore/VCore-PULSE/releases
+
+---
+
+Confira a integridade dos arquivos em:
+
+**SHA256SUMS.txt**
+
+---
+
+# Public Beta
+
+Esta versão está disponível para validação pública.
+
+Durante as próximas semanas o algoritmo continuará sendo calibrado através do **Baseline Estrutural Temporal**, permitindo que cada máquina aprenda sua própria identidade operacional.
+
+Feedbacks são muito bem-vindos.
+
+📧 rafael@voigtcore.com.br
+
+ou
+
+https://github.com/VoigtCore/VCore-PULSE/issues
+
+---
+
+# Principais recursos
+
+✔ Runtime Intelligence
+
+✔ Saúde Operacional
+
+✔ Integridade Computacional
+
+✔ Elasticidade
+
+✔ Resiliência
+
+✔ Entropia
+
+✔ Linha da Vida
+
+✔ Story Executivo
+
+✔ Timeline Temporal
+
+✔ Telegram Bot
+
+✔ Relatórios PDF
+
+✔ Diagnóstico
+
+✔ Trial de 10 dias
+
+✔ Licenciamento Online
+
+---
+
+# Capturas
+
+## Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+---
+
+## Linha da Vida
+
+![Timeline](screenshots/timeline.png)
+
+---
 
 <details>
-<summary>Story, Telegram e Relatórios</summary>
 
-![Story do Dia](screenshots/story.png)
+<summary><strong>Mais imagens</strong></summary>
+
+### Story Executivo
+
+![Story](screenshots/story.png)
+
+### Telegram
 
 ![Telegram](screenshots/telegram.png)
 
-![Relatórios](screenshots/reports.png)
+### Relatórios
+
+![Reports](screenshots/reports.png)
 
 </details>
 
-## Instalação
+---
 
-### Windows
+# Instalação
 
-1. Baixe `VCorePulse2.0.exe`.
-2. Confira o SHA-256.
-3. Execute o instalador e abra **VCore Pulse 2.0**.
-4. A interface local será aberta em `http://127.0.0.1:4173`.
+## Windows
 
-> O executável da Public Beta ainda não possui assinatura Authenticode. O Windows pode exibir um aviso do SmartScreen.
+1. Baixe o instalador.
 
-### Linux
+2. Execute **VCorePulse2.0.exe**
+
+3. Aguarde a instalação.
+
+4. O navegador abrirá automaticamente:
+
+```
+http://127.0.0.1:4173
+```
+
+> Nesta versão Public Beta o executável ainda não possui assinatura digital Authenticode. O Windows SmartScreen poderá exibir um aviso.
+
+---
+
+## Linux
 
 ```bash
 chmod +x VCorePulse2.0.sh
+
 ./VCorePulse2.0.sh
 ```
 
-O runtime necessário está incluído nos pacotes. Não é necessário instalar Node.js, npm, Git, SQLite ou Python.
+Nenhuma dependência adicional é necessária.
 
-## Privacidade operacional
+---
 
-A coleta e o aprendizado permanecem na máquina local, em `pulse.db`. O VCore Cloud é utilizado somente para serviços comerciais e de comunicação configurados pelo usuário. Consulte a [FAQ](docs/FAQ.md) e a [Arquitetura](docs/ARCHITECTURE.md).
+# Privacidade
 
-## Documentação
+Todos os dados operacionais permanecem armazenados localmente.
 
-- [Guia do usuário](USER_GUIDE.md)
-- [Arquitetura](docs/ARCHITECTURE.md)
-- [Fundação científica](docs/SCIENTIFIC_FOUNDATION.md)
-- [Perguntas frequentes](docs/FAQ.md)
-- [Limitações conhecidas](docs/KNOWN_LIMITATIONS.md)
-- [Relatório da Release Candidate](RELEASE_CANDIDATE_REPORT.md)
-- [Política de segurança](SECURITY.md)
+Banco local
 
-## Licença
+```
+pulse.db
+```
 
-O VCore Pulse é software comercial proprietário disponibilizado em Public Beta. Consulte [LICENSE.md](LICENSE.md).
+Nenhuma telemetria operacional é enviada para a nuvem.
+
+Os serviços VCore Cloud são utilizados apenas para:
+
+- Licenciamento
+- Comércio
+- Telegram
+- Serviços autorizados pelo usuário
+
+---
+
+# Documentação
+
+- Guia do Usuário
+- Arquitetura
+- Fundação Científica
+- FAQ
+- Limitações Conhecidas
+- Política de Segurança
+- Roadmap
+- Release Candidate Report
+
+---
+
+# Próxima atualização
+
+A próxima atualização pública incluirá:
+
+🇺🇸 Interface completa em Inglês
+
+🇺🇸 Documentação em Inglês
+
+🧠 Baseline Estrutural Temporal
+
+🤖 Assistente guiado para configuração do Telegram
+
+📈 Calibração científica da Saúde Operacional
+
+📊 Aprendizado por horário, dia da semana, finais de semana e sazonalidade
+
+⚡ Melhorias de desempenho
+
+---
+
+# Filosofia
+
+> **O átomo forma a química do bit, formando sua trajetória.**
+
+---
+
+# Licença
+
+Software proprietário.
+
+Disponibilizado em **Public Beta** para testes e validação da comunidade.
+
+Consulte:
+
+LICENSE.md
