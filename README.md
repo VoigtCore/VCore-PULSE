@@ -10,8 +10,8 @@
 
 [![Status](https://img.shields.io/badge/status-Public%20Beta-f0b45a)](ROADMAP.md)
 [![Version](https://img.shields.io/badge/version-2.0%20RC2-67efbc)](CHANGELOG.md)
-[![Windows](https://img.shields.io/badge/Windows-10%20|%2011-1674cf)](#installation)
-[![Linux](https://img.shields.io/badge/Linux-x64-f5a623)](#installation)
+[![Windows](https://img.shields.io/badge/Windows-10%20|%2011-1674cf)](#instalação)
+[![Linux](https://img.shields.io/badge/Linux-x64-f5a623)](#instalação)
 
 </p>
 
@@ -31,29 +31,30 @@ O objetivo é compreender o comportamento computacional.
 
 # Download
 
-## Windows
+## Public Beta RC2
 
-⬇ **Download (sempre última versão)**
+➡️ **Baixe a versão mais recente diretamente pela página de Releases**
 
-https://github.com/VoigtCore/VCore-PULSE/releases/latest/download/VCorePulse2.0.exe
+https://github.com/VoigtCore/VCore-PULSE/releases/tag/v2.0.0-rc2
 
----
+ou
 
-## Linux
-
-⬇ **Download (sempre última versão)**
-
-https://github.com/VoigtCore/VCore-PULSE/releases/latest/download/VCorePulse2.0.sh
-
----
-
-## Todas as versões
+➡️ **Todas as versões publicadas**
 
 https://github.com/VoigtCore/VCore-PULSE/releases
 
 ---
 
-Confira a integridade dos arquivos em:
+Nesta página estarão disponíveis:
+
+- Windows (.exe)
+- Linux (.sh)
+- Histórico de versões
+- Notas da Release
+- SHA256
+- Código fonte
+
+Confira também a integridade dos arquivos utilizando:
 
 **SHA256SUMS.txt**
 
@@ -65,9 +66,11 @@ Esta versão está disponível para validação pública.
 
 Durante as próximas semanas o algoritmo continuará sendo calibrado através do **Baseline Estrutural Temporal**, permitindo que cada máquina aprenda sua própria identidade operacional.
 
+O objetivo desta fase é validar o comportamento do algoritmo em diferentes computadores e perfis de uso.
+
 Feedbacks são muito bem-vindos.
 
-📧 rafael@voigtcore.com.br
+📧 **rafael@voigtcore.com.br**
 
 ou
 
@@ -123,7 +126,7 @@ https://github.com/VoigtCore/VCore-PULSE/issues
 
 <details>
 
-<summary><strong>Mais imagens</strong></summary>
+<summary><strong>Story, Telegram e Relatórios</strong></summary>
 
 ### Story Executivo
 
@@ -145,13 +148,15 @@ https://github.com/VoigtCore/VCore-PULSE/issues
 
 ## Windows
 
-1. Baixe o instalador.
+1. Acesse a página de Releases.
 
-2. Execute **VCorePulse2.0.exe**
+2. Baixe **VCorePulse2.0.exe**.
 
-3. Aguarde a instalação.
+3. Execute o instalador.
 
-4. O navegador abrirá automaticamente:
+4. Aguarde a instalação.
+
+5. O navegador abrirá automaticamente em:
 
 ```
 http://127.0.0.1:4173
@@ -162,6 +167,8 @@ http://127.0.0.1:4173
 ---
 
 ## Linux
+
+Baixe **VCorePulse2.0.sh** na página de Releases e execute:
 
 ```bash
 chmod +x VCorePulse2.0.sh
@@ -217,11 +224,11 @@ A próxima atualização pública incluirá:
 
 🧠 Baseline Estrutural Temporal
 
+🧠 Aprendizado por horário, dia da semana, finais de semana, feriados e sazonalidade operacional
+
 🤖 Assistente guiado para configuração do Telegram
 
-📈 Calibração científica da Saúde Operacional
-
-📊 Aprendizado por horário, dia da semana, finais de semana e sazonalidade
+📈 Melhorias na calibração científica da Saúde Operacional
 
 ⚡ Melhorias de desempenho
 
