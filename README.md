@@ -1,251 +1,49 @@
-# VCore Pulse 2.0
+# VCore Pulse 2.1
 
-<p align="center">
+**Saúde Operacional Digital para Windows, Linux e macOS.**
 
-![VCore Pulse](screenshots/vcore-pulse.png)
+O VCore Pulse interpreta a trajetória operacional do computador e transforma sinais locais em uma leitura executiva simples sobre integridade, recuperação, pressão e continuidade.
 
-</p>
+## Download oficial
 
-<p align="center">
+Acesse a **[Release 2.1.0](https://github.com/VoigtCore/VCore-PULSE/releases/tag/v2.1.0)**.
 
-[![Status](https://img.shields.io/badge/status-Public%20Beta-f0b45a)](ROADMAP.md)
-[![Version](https://img.shields.io/badge/version-2.0%20RC2-67efbc)](CHANGELOG.md)
-[![Windows](https://img.shields.io/badge/Windows-10%20|%2011-1674cf)](#instalação)
-[![Linux](https://img.shields.io/badge/Linux-x64-f5a623)](#instalação)
+| Plataforma | Estado | Arquivo |
+|---|---:|---|
+| Windows 10 | Disponível | `VCorePulse2.1.exe` |
+| Windows 11 | Em validação | Em breve |
+| Linux x64 | Disponível | `VCorePulse2.1.sh` |
+| macOS Intel | Disponível | `VCorePulse2.1-macos-x64.sh` |
+| macOS Apple Silicon | Disponível | `VCorePulse2.1-macos-arm64.sh` |
 
-</p>
+O arquivo **SHA256SUMS.txt** acompanha a Release.
 
-# Digital Operational Health
+## Recursos
 
-VCore Pulse é uma plataforma de **Runtime Intelligence** e **Saúde Operacional Digital**.
+- leitura executiva dinâmica e identidade operacional;
+- integridade, elasticidade, resiliência e entropia;
+- Linha da Vida, Story do Dia e relatórios;
+- Telegram autorizado pelo usuário;
+- diagnóstico e exportação da memória;
+- trial de 10 dias e licenciamento online;
+- memória local persistente.
 
-Ao invés de observar apenas CPU, memória, disco ou rede em um determinado instante, o Pulse interpreta a **trajetória operacional** de cada computador ao longo do tempo.
+## Instalação
 
-Cada máquina desenvolve sua própria identidade operacional.
+**Windows 10:** execute `VCorePulse2.1.exe` e aguarde o ícone indicar Online.
 
-O objetivo não é monitorar recursos.
+**Linux:** `chmod +x VCorePulse2.1.sh && ./VCorePulse2.1.sh`.
 
-O objetivo é compreender o comportamento computacional.
+**macOS:** use o pacote Intel ou Apple Silicon da Release.
 
----
+O painel abre em `http://127.0.0.1:4173`.
 
-# Download
+## Privacidade e suporte
 
-## Public Beta RC2
+A memória permanece local em `pulse.db`. A nuvem é usada apenas para licenciamento, comércio e serviços habilitados.
 
-➡️ **Baixe a versão mais recente diretamente pela página de Releases**
+[Changelog](CHANGELOG.md) · [Segurança](SECURITY.md) · [Guia](USER_GUIDE.md) · [Issues](https://github.com/VoigtCore/VCore-PULSE/issues) · [Contato](mailto:rafael@voigtcore.com.br)
 
-https://github.com/VoigtCore/VCore-PULSE/releases/tag/v2.0.0-rc2
+Software comercial proprietário. Consulte [LICENSE.md](LICENSE.md).
 
-ou
-
-➡️ **Todas as versões publicadas**
-
-https://github.com/VoigtCore/VCore-PULSE/releases
-
----
-
-Nesta página estarão disponíveis:
-
-- Windows (.exe)
-- Linux (.sh)
-- Histórico de versões
-- Notas da Release
-- SHA256
-- Código fonte
-
-Confira também a integridade dos arquivos utilizando:
-
-**SHA256SUMS.txt**
-
----
-
-# Public Beta
-
-Esta versão está disponível para validação pública.
-
-Durante as próximas semanas o algoritmo continuará sendo calibrado através do **Baseline Estrutural Temporal**, permitindo que cada máquina aprenda sua própria identidade operacional.
-
-O objetivo desta fase é validar o comportamento do algoritmo em diferentes computadores e perfis de uso.
-
-Feedbacks são muito bem-vindos.
-
-📧 **rafael@voigtcore.com.br**
-
-ou
-
-https://github.com/VoigtCore/VCore-PULSE/issues
-
----
-
-# Principais recursos
-
-✔ Runtime Intelligence
-
-✔ Saúde Operacional
-
-✔ Integridade Computacional
-
-✔ Elasticidade
-
-✔ Resiliência
-
-✔ Entropia
-
-✔ Linha da Vida
-
-✔ Story Executivo
-
-✔ Timeline Temporal
-
-✔ Telegram Bot
-
-✔ Relatórios PDF
-
-✔ Diagnóstico
-
-✔ Trial de 10 dias
-
-✔ Licenciamento Online
-
----
-
-# Capturas
-
-## Dashboard
-
-![Dashboard](screenshots/dashboard.png)
-
----
-
-## Linha da Vida
-
-![Timeline](screenshots/timeline.png)
-
----
-
-<details>
-
-<summary><strong>Story, Telegram e Relatórios</strong></summary>
-
-### Story Executivo
-
-![Story](screenshots/story.png)
-
-### Telegram
-
-![Telegram](screenshots/telegram.png)
-
-### Relatórios
-
-![Reports](screenshots/reports.png)
-
-</details>
-
----
-
-# Instalação
-
-## Windows
-
-1. Acesse a página de Releases.
-
-2. Baixe **VCorePulse2.0.exe**.
-
-3. Execute o instalador.
-
-4. Aguarde a instalação.
-
-5. O navegador abrirá automaticamente em:
-
-```
-http://127.0.0.1:4173
-```
-
-> Nesta versão Public Beta o executável ainda não possui assinatura digital Authenticode. O Windows SmartScreen poderá exibir um aviso.
-
----
-
-## Linux
-
-Baixe **VCorePulse2.0.sh** na página de Releases e execute:
-
-```bash
-chmod +x VCorePulse2.0.sh
-
-./VCorePulse2.0.sh
-```
-
-Nenhuma dependência adicional é necessária.
-
----
-
-# Privacidade
-
-Todos os dados operacionais permanecem armazenados localmente.
-
-Banco local
-
-```
-pulse.db
-```
-
-Nenhuma telemetria operacional é enviada para a nuvem.
-
-Os serviços VCore Cloud são utilizados apenas para:
-
-- Licenciamento
-- Comércio
-- Telegram
-- Serviços autorizados pelo usuário
-
----
-
-# Documentação
-
-- Guia do Usuário
-- Arquitetura
-- Fundação Científica
-- FAQ
-- Limitações Conhecidas
-- Política de Segurança
-- Roadmap
-- Release Candidate Report
-
----
-
-# Próxima atualização
-
-A próxima atualização pública incluirá:
-
-🇺🇸 Interface completa em Inglês
-
-🇺🇸 Documentação em Inglês
-
-🧠 Baseline Estrutural Temporal
-
-🧠 Aprendizado por horário, dia da semana, finais de semana, feriados e sazonalidade operacional
-
-🤖 Assistente guiado para configuração do Telegram
-
-📈 Melhorias na calibração científica da Saúde Operacional
-
-⚡ Melhorias de desempenho
-
----
-
-# Filosofia
-
-> **O átomo forma a química do bit, formando sua trajetória.**
-
----
-
-# Licença
-
-Software proprietário.
-
-Disponibilizado em **Public Beta** para testes e validação da comunidade.
-
-Consulte:
-
-LICENSE.md
+> O átomo forma a química do bit, formando sua trajetória.
