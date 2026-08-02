@@ -1,23 +1,22 @@
 # Changelog
 
-Todas as mudanças relevantes da distribuição pública serão registradas neste documento.
+## 2.1.0 — 02/08/2026
 
-## 2.0 RC2 — Public Beta — 30/07/2026
+### Adicionado
+- distribuições Windows 10, Linux x64 e macOS Intel/Apple Silicon;
+- botão de download na Home e downloads oficiais em Minha Conta;
+- retorno visual após gerar PIX, verificar pagamento e solicitar acesso;
+- removedor oficial para instalações anteriores.
 
-Primeira versão pública do VCore Pulse 2.0.
+### Corrigido
+- continuidade e inicialização do motor local;
+- limite de memória ampliado para impedir encerramento por heap;
+- diagnóstico do ícone prioriza a causa real da falha;
+- narrativa executiva e registro de períodos realmente desligados.
 
-### Incluído
+### Em validação
+- o pacote Windows 11 permanece temporariamente indisponível.
 
-- Centro Executivo de Saúde Operacional.
-- Integridade adaptativa por baseline individual.
-- Elasticidade, Resiliência e Entropia.
-- Linha da Vida, Story do Dia, calendário e comparativos.
-- Relatórios PDF, CSV e JSON.
-- Telegram Service.
-- Diagnóstico e exportação da memória.
-- Trial de dez dias e integração com VCore Commerce.
-- Instaladores autônomos para Windows e Linux x64.
+## 2.0 RC2 — 30/07/2026
 
-### Observação
-
-Os indicadores científicos permanecem em calibração durante a Public Beta. Consulte [Limitações conhecidas](docs/KNOWN_LIMITATIONS.md).
+Primeira versão pública com Centro Executivo, Linha da Vida, relatórios, Telegram, trial e licenciamento online.
