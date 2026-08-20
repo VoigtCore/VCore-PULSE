@@ -1,6 +1,6 @@
 # VCore Pulse 2.0 — Guia rápido
 
-Build: **2026.07.30-rc.2**
+Build: **2026.08.12-2.1.1-integrity.1**
 
 ## Primeira execução
 
