@@ -1,5 +1,22 @@
 # Changelog
 
+## 2.1.1 — 12/08/2026
+
+### Adicionado
+- distribuição oficial para Windows 10 e Windows 11 x64;
+- pacotes Linux x64, macOS Intel e macOS Apple Silicon;
+- manifesto de release e somas SHA-256 atualizadas;
+- backup autenticado e preservação da memória durante a atualização.
+
+### Melhorado
+- estabilidade de inicialização e continuidade do motor local;
+- integridade do pacote de distribuição;
+- atualização direta sobre a versão anterior, sem perda da memória operacional;
+- documentação de instalação e suporte.
+
+### Próxima evolução
+- o VCore Pulse 2.2 permanece em desenvolvimento, com avanços na gestão do banco de dados, memória, vocabulário, interpretação, idiomas, estabilidade, observabilidade e Runtime Intelligence.
+
 ## 2.1.0 — 02/08/2026
 
 ### Adicionado
@@ -15,7 +32,7 @@
 - narrativa executiva e registro de períodos realmente desligados.
 
 ### Em validação
-- o pacote Windows 11 permanece temporariamente indisponível.
+- estado histórico da versão 2.1.0: o pacote Windows 11 permanecia temporariamente indisponível.
 
 ## 2.0 RC2 — 30/07/2026
 
