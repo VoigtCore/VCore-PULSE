@@ -1,18 +1,13 @@
-﻿{
-    "product":  "VCore Pulse",
-    "version":  "2.0.0",
-    "build":  "2026.07.30-rc.2",
-    "generatedAt":  "2026-07-30T22:19:40.9064580Z",
-    "artifacts":  [
-                      {
-                          "file":  "VCorePulse2.0.exe",
-                          "bytes":  40532501,
-                          "sha256":  "54ad6df3106114c853141b4380f09fdacc07a5b52b332df81181de72301ad873"
-                      },
-                      {
-                          "file":  "VCorePulse2.0.sh",
-                          "bytes":  49878948,
-                          "sha256":  "d30fe60833f74fd50334b0d0df2d9df1ec3f9a059c3797e6912e18b576c0618b"
-                      }
-                  ]
+{
+  "product": "VCore Pulse",
+  "version": "2.1.1",
+  "build": "2026.08.12-2.1.1-integrity.1",
+  "generatedAt": "2026-08-12T13:40:09.5918664Z",
+  "artifacts": [
+    {"file": "VCorePulse2.1.1.exe", "bytes": 40657123, "sha256": "5086d60ab5446be862b34f884065f3663ae5a5d7c0e42576719f19bb27460f6b"},
+    {"file": "VCorePulse-Removedor.exe", "bytes": 73728, "sha256": "7e1e336f5e1089721e99f35c553c3d00a00f7cc489fdae89cdc730839da5c10c"},
+    {"file": "VCorePulse2.1.1-linux-x64.sh", "bytes": 49939677, "sha256": "f3627cc07fea3d0b1cc179f27f5b151ee49e8702ed06581e6c2ff6ee43a442aa"},
+    {"file": "VCorePulse2.1.1-macos-x64.sh", "bytes": 45940251, "sha256": "332e6f773c6f06b769dda93eccf99de434ab22416192858c9cd378adfe1a910a"},
+    {"file": "VCorePulse2.1.1-macos-arm64.sh", "bytes": 44718927, "sha256": "7554b3d41f89390c2e733e7463000e7d2d35691aea35dc573d626bac76da16d2"}
+  ]
 }
