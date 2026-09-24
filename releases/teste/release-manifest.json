@@ -1,0 +1,19 @@
+{
+  "product": "VCore Pulse",
+  "version": "2.2.0",
+  "build": "2026.09.23-pulse-evolution",
+  "channel": "candidate",
+  "distributionStatus": "UNSIGNED_CANDIDATE",
+  "generatedAt": "2026-09-23T23:52:35.1255886Z",
+  "artifacts": [
+    {
+      "file": "VCorePulse2.2.0-windows-x64.exe",
+      "version": "2.2.0",
+      "channel": "candidate",
+      "platform": "win32",
+      "architecture": "x64",
+      "bytes": 45237868,
+      "sha256": "1060ecf35c808f33fae683a167db4556e7954ea3143f4e17cf0e64a6abb0bbb3"
+    }
+  ]
+}
