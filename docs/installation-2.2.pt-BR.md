@@ -7,10 +7,10 @@
 
 ## Windows 10/11 x64
 
-Abra `VCorePulse-2.2.0-windows-x64.exe` no usuário que utiliza o Pulse. É o mesmo v16 validado pelo responsável. O arquivo ainda não tem assinatura Authenticode. Se o Windows bloquear por política corporativa, solicite revisão ao administrador; não desative proteções do sistema.
+Abra `VCorePulse-2.2.0-windows10-11-x64-Setup.exe` no usuário que utiliza o Pulse. É o mesmo v16 validado pelo responsável. O arquivo ainda não tem assinatura Authenticode. Se o Windows bloquear por política corporativa, solicite revisão ao administrador; não desative proteções do sistema.
 
 ```powershell
-Get-FileHash .\VCorePulse-2.2.0-windows-x64.exe -Algorithm SHA256
+Get-FileHash .\VCorePulse-2.2.0-windows10-11-x64-Setup.exe -Algorithm SHA256
 ```
 
 ## Linux e macOS
@@ -19,7 +19,7 @@ Os pacotes incluem Node e SQLCipher. Não é necessário instalar npm. Não use 
 
 ```sh
 # Na pasta do download; use o nome correspondente à sua plataforma.
-sh VCorePulse-2.2.0-linux-x64-port3.sh
+sh VCorePulse-2.2.0-linux-x64.sh
 ```
 
 Linux desktop: sessão com Secret Service desbloqueado e `secret-tool` instalado. O instalador configura serviço do usuário, quando a sessão systemd está disponível. Sem sessão de serviço, execute `~/.local/opt/vcore-pulse/start-vcore-pulse.sh`.
@@ -27,7 +27,7 @@ Linux desktop: sessão com Secret Service desbloqueado e `secret-tool` instalado
 Linux sem interface gráfica pode usar explicitamente:
 
 ```sh
-sh VCorePulse-2.2.0-linux-arm64-port3.sh --headless-key-files
+sh VCorePulse-2.2.0-linux-arm64.sh --headless-key-files
 ```
 
 Nesse modo, o banco permanece SQLCipher e as duas chaves são criadas em `~/.config/vcore-pulse/keys`, separadas do banco, com permissões 0600. **É proteção por permissões, não cofre criptografado do sistema.** Quem obtiver os arquivos e banco poderá acessar os dados. Proteja o host e guarde as chaves junto ao procedimento de backup. Nunca publique esses arquivos.

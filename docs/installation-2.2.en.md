@@ -7,7 +7,7 @@
 
 ## Windows
 
-Open `VCorePulse-2.2.0-windows-x64.exe` as the Pulse user. It is the owner-accepted v16 binary. Authenticode signing is not available. If blocked by policy, ask the administrator for review; do not disable OS protections.
+Open `VCorePulse-2.2.0-windows10-11-x64-Setup.exe` as the Pulse user. It is the owner-accepted v16 binary. Authenticode signing is not available. If blocked by policy, ask the administrator for review; do not disable OS protections.
 
 ## Linux and macOS
 
@@ -15,7 +15,7 @@ Runtime and native SQLCipher are included. No npm installation is required. Do n
 
 ```sh
 # In Downloads, replace this filename with your platform's file.
-sh VCorePulse-2.2.0-linux-x64-port3.sh
+sh VCorePulse-2.2.0-linux-x64.sh
 ```
 
 Linux desktop requires unlocked Secret Service and `secret-tool`. The installer enables a user systemd service when available; otherwise start `~/.local/opt/vcore-pulse/start-vcore-pulse.sh` manually.
@@ -23,7 +23,7 @@ Linux desktop requires unlocked Secret Service and `secret-tool`. The installer 
 Headless Linux can explicitly choose:
 
 ```sh
-sh VCorePulse-2.2.0-linux-arm64-port3.sh --headless-key-files
+sh VCorePulse-2.2.0-linux-arm64.sh --headless-key-files
 ```
 
 The SQLCipher database stays encrypted. Separate keys are stored in `~/.config/vcore-pulse/keys` with mode 0600. **This is permission protection, not an encrypted OS vault.** Anyone obtaining both keys and database can access data. Protect the host and preserve keys with the backup procedure; never publish them.
