@@ -18,17 +18,19 @@ try{
  const installed=exec('sh',[path.resolve('installer.sh'),'--no-start']);assert.match(installed,/Installed VCore Pulse 2.2/);proof.steps.push('INSTALL_PASS');
  const health=await start();assert.equal(health.status,'ok');proof.steps.push('HEALTH_PASS');
  const about=await (await request('/api/pulse/support/about')).json();assert.equal(about.build,'2026.09.28-release-candidate.16-port.3');proof.build=about.build;
+ assert.equal(about.database.engine,'SQLCipher');
  const malicious=await request('/api/pulse/license/customer',{method:'POST',headers:{Origin:'https://untrusted.invalid','Content-Type':'application/json'},body:'{}'});assert.equal(malicious.status,403);proof.steps.push('CROSS_ORIGIN_DENIED');
  proof.pdf={};
  for(const locale of ['pt-BR','en','es','zh-CN','zh-TW']){
   const pdf=await request('/api/pulse/report?period=24h&format=pdf&lang='+locale);if(pdf.status!==200){const j=await(await request('/api/pulse/report?period=24h&format=json&lang='+locale)).json();const leaks=[];function walk(v,k=''){if(typeof v==='string'&&/relatório|episódios|recuperação|evidência|memória|saúde|hipótese|informe|confianza/i.test(v))leaks.push({path:k,text:v.slice(0,400)});else if(v&&typeof v==='object')for(const [n,x]of Object.entries(v))walk(x,k+'.'+n);}walk(j);proof.localizationDiagnostic=leaks;throw Error('PDF '+locale+' '+pdf.status+': '+await pdf.text());}const bytes=Buffer.from(await pdf.arrayBuffer());assert.equal(bytes.subarray(0,5).toString(),'%PDF-');proof.pdf[locale]=bytes.length;
  }
  proof.steps.push('PDF_FIVE_LANGUAGES_PASS');
+ const prior=await(await request('/api/pulse/support/update/readiness')).json();assert.equal(prior.integrity,'OK');assert.ok(prior.machineId);assert.ok(prior.telemetryRows>0);
  await stop();proof.steps.push('SHUTDOWN_PASS');
  assert.notEqual(fs.readFileSync(path.join(data,'pulse.db')).subarray(0,16).toString(),'SQLite format 3\0');proof.steps.push('ENCRYPTED_DATABASE_PASS');
  const dbHash=crypto.createHash('sha256').update(fs.readFileSync(path.join(data,'pulse.db'))).digest('hex');
  exec('sh',[path.resolve('installer.sh'),'--no-start']);assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(data,'pulse.db'))).digest('hex'),dbHash);proof.steps.push('REINSTALL_PRESERVES_DATABASE');
- await start();await stop();proof.steps.push('RESTART_PASS');
+ await start();const after=await(await request('/api/pulse/support/update/readiness')).json();assert.equal(after.machineId,prior.machineId);assert.equal(after.integrity,'OK');assert.ok(after.telemetryRows>=prior.telemetryRows);await stop();proof.steps.push('RESTART_IDENTITY_HISTORY_PASS');
  const manifest=path.join(app,'pulse/vendor/sqlcipher',process.platform+'-'+process.arch,'RUNTIME-MANIFEST.json');fs.appendFileSync(manifest,' ');
  const node=path.join(app,'runtime/bin/node');const tamper=spawnSync(node,['--input-type=module','-e',`const m=await import(${JSON.stringify('file://'+path.join(app,'pulse/sqlite-runtime.js'))});console.log(m.probeSqlCipherRuntime().errorCode);`],{env,encoding:'utf8'});assert.match(tamper.stdout,/SQLCIPHER_ARTIFACT_INTEGRITY_FAILED/);proof.steps.push('MANIFEST_TAMPER_DENIED');
  proof.status='PASS';
