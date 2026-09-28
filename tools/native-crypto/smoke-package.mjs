@@ -5,7 +5,7 @@ const keyDir=path.join(root,'test-keys');fs.mkdirSync(keyDir,{mode:0o700});
 for(const name of ['database','master'])fs.writeFileSync(path.join(keyDir,name),crypto.randomBytes(32).toString('base64'),{mode:0o600});
 const env={...process.env,HOME:home,VCORE_INSTALL_ROOT:app,VCORE_DATA_ROOT:data,VCORE_NO_BROWSER:'1',PULSE_HOST:'127.0.0.1',PULSE_PORT:'4198',VCORE_COMMERCE_URL:'http://127.0.0.1:9',VCORE_COMMERCE_PORTAL_URL:'http://127.0.0.1:9',PULSE_DATABASE_KEY_FILE:path.join(keyDir,'database'),PULSE_MASTER_KEY_FILE:path.join(keyDir,'master')};
 delete env.GH_TOKEN;delete env.GITHUB_TOKEN;
-const proof={platform:process.platform,architecture:process.arch,status:'RUNNING',bankConnections:0,keyStorage:'disposable external keys; native OS vault tested separately',steps:[]};let child;
+const proof={platform:process.platform,architecture:process.arch,status:'RUNNING',commerceEndpoint:'loopback port 9 (disabled)',keyStorage:'disposable external keys; OS vault not covered by this test',steps:[]};let child;
 const delay=ms=>new Promise(r=>setTimeout(r,ms));
 function exec(command,args){const r=spawnSync(command,args,{env,encoding:'utf8',timeout:180000});if(r.status!==0)throw Error(`${command} failed (${r.status}): ${r.stderr}\n${r.stdout}`);return r.stdout;}
 async function request(route,options={}){return fetch('http://127.0.0.1:4198'+route,{...options,signal:AbortSignal.timeout(30000)});}
@@ -17,9 +17,13 @@ async function stop(){const r=await request('/api/pulse/shutdown',{method:'POST'
 try{
  const installed=exec('sh',[path.resolve('installer.sh'),'--no-start']);assert.match(installed,/Installed VCore Pulse 2.2/);proof.steps.push('INSTALL_PASS');
  const health=await start();assert.equal(health.status,'ok');proof.steps.push('HEALTH_PASS');
- const about=await (await request('/api/pulse/support/about')).json();assert.equal(about.build,'2026.09.28-release-candidate.16-port.1');proof.build=about.build;
+ const about=await (await request('/api/pulse/support/about')).json();assert.equal(about.build,'2026.09.28-release-candidate.16-port.2');proof.build=about.build;
  const malicious=await request('/api/pulse/license/customer',{method:'POST',headers:{Origin:'https://untrusted.invalid','Content-Type':'application/json'},body:'{}'});assert.equal(malicious.status,403);proof.steps.push('CROSS_ORIGIN_DENIED');
- const pdf=await request('/api/pulse/report?period=24h&format=pdf&lang=pt-BR');if(pdf.status!==200)throw Error('PDF '+pdf.status+': '+await pdf.text());const bytes=Buffer.from(await pdf.arrayBuffer());assert.equal(bytes.subarray(0,5).toString(),'%PDF-');proof.pdfBytes=bytes.length;proof.steps.push('PDF_PASS');
+ proof.pdf={};
+ for(const locale of ['pt-BR','en','es','zh-CN','zh-TW']){
+  const pdf=await request('/api/pulse/report?period=24h&format=pdf&lang='+locale);if(pdf.status!==200)throw Error('PDF '+locale+' '+pdf.status+': '+await pdf.text());const bytes=Buffer.from(await pdf.arrayBuffer());assert.equal(bytes.subarray(0,5).toString(),'%PDF-');proof.pdf[locale]=bytes.length;
+ }
+ proof.steps.push('PDF_FIVE_LANGUAGES_PASS');
  await stop();proof.steps.push('SHUTDOWN_PASS');
  assert.notEqual(fs.readFileSync(path.join(data,'pulse.db')).subarray(0,16).toString(),'SQLite format 3\0');proof.steps.push('ENCRYPTED_DATABASE_PASS');
  const dbHash=crypto.createHash('sha256').update(fs.readFileSync(path.join(data,'pulse.db'))).digest('hex');
