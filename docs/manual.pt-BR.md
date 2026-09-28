@@ -1,10 +1,10 @@
 # Manual do VCore Pulse 2.2
 
-[English](manual.en.md) · [Estado dos builds](platforms-2.2.md) · [Site oficial](https://www.voigtcore.com.br/)
+🇧🇷 [Português](manual.pt-BR.md) · 🇺🇸 [English](manual.en.md) · 🇪🇸 [Español](manual.es.md) · 🇨🇳 [简体中文](manual.zh-Hans.md) · 🇹🇼 [繁體中文](manual.zh-Hant.md)
 
 O Pulse leva **Memória Operacional** à máquina: observa recursos, relaciona acontecimentos e preserva o contexto do que mudou e de como a máquina se recuperou. O sistema operacional pode mudar; o conceito permanece.
 
-> Edição de 28/09/2026. A versão 2.2 está em validação. Um pacote gerado não significa plataforma homologada. Consulte a matriz antes de instalar. Este repositório contém documentação pública, não o código privado dos motores.
+> Edição de 28/09/2026. Apresentação do Pulse 2.2. Os downloads 2.2 ainda não estão liberados. Um pacote gerado não significa plataforma homologada. Consulte a matriz antes de instalar. Este repositório contém documentação pública, não o código privado dos motores.
 
 ## 1. Escolha o pacote certo
 
@@ -38,17 +38,17 @@ As capturas desta página são registros reais já publicados do Pulse. A aprese
 
 Uma nota alta não garante ausência de falhas. O Pulse oferece evidência para análise; não substitui backup, antivírus ou decisões da equipe responsável.
 
-## 4. Leia a trajetória
+## 4. Leia os gráficos e a trajetória
 
 ![Linha do tempo real do Pulse](../screenshots/timeline.png)
 
-Abra o histórico para relacionar mudanças, impactos e recuperações. Consulte datas e turnos disponíveis. Uma comparação sem amostras suficientes deve aparecer como indisponível, não como um fato inventado. O histórico pertence à identidade daquela máquina.
+Os gráficos mostram a evolução das medições; observe o período, a quantidade de amostras e o contexto. Abra o histórico para relacionar mudanças, impactos e recuperações. Consulte datas e turnos disponíveis. Uma comparação sem amostras suficientes deve aparecer como indisponível, não como um fato inventado. O histórico pertence à identidade daquela máquina.
 
 ## 5. Relatórios, avisos e idioma
 
 ![Relatórios do Pulse](../screenshots/reports.png)
 
-Escolha o período disponível para consultar ou gerar relatórios. Recursos de envio por e-mail exigem configuração e confirmação do destinatário. Telegram também exige configuração explícita. Consulte o estado do envio; solicitar um envio não prova entrega.
+Escolha o período disponível para consultar ou gerar relatórios. O Pulse 2.2 evolui comparações entre períodos, resumo executivo e explicações dos episódios, aproximando os gráficos dos acontecimentos. Períodos sem amostras não comprovam funcionamento normal. Recursos de envio por e-mail exigem configuração e confirmação do destinatário. Telegram também exige configuração explícita. Consulte o estado do envio; solicitar um envio não prova entrega.
 
 O painel oferece português, inglês, espanhol, chinês simplificado e tradicional. A mudança de idioma altera a apresentação, não a identidade ou os registros históricos.
 

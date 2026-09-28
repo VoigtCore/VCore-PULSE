@@ -2,13 +2,25 @@
 
 **Memória Operacional para a máquina. / Operational Memory for your machine.**
 
-[Manual em português](docs/manual.pt-BR.md) · [English manual](docs/manual.en.md) · [Plataformas / Platforms](docs/platforms-2.2.md) · [Site oficial](https://www.voigtcore.com.br/)
+🇧🇷 [Português](docs/manual.pt-BR.md) · 🇺🇸 [English](docs/manual.en.md) · 🇪🇸 [Español](docs/manual.es.md) · 🇨🇳 [简体中文](docs/manual.zh-Hans.md) · 🇹🇼 [繁體中文](docs/manual.zh-Hant.md)
 
 ![Painel real do VCore Pulse; captura pública de referência](screenshots/dashboard.png)
 
 O Pulse observa recursos, relaciona mudanças e recuperações e preserva a trajetória da máquina. A versão 2.2 evolui contexto operacional, identidade de processos, continuidade da memória, relatórios, licenciamento e pagamentos.
 
 Pulse observes resources, connects changes and recoveries, and preserves the machine's trajectory. Version 2.2 advances operational context, process identity, memory continuity, reports, licensing and payments.
+
+## Comece no seu idioma / Start in your language
+
+| Idioma / Language | Manual |
+|---|---|
+| 🇧🇷 Português | [Abrir manual](docs/manual.pt-BR.md) |
+| 🇺🇸 English | [Open guide](docs/manual.en.md) |
+| 🇪🇸 Español | [Abrir manual](docs/manual.es.md) |
+| 🇨🇳 简体中文 | [打开手册](docs/manual.zh-Hans.md) |
+| 🇹🇼 繁體中文 | [開啟手冊](docs/manual.zh-Hant.md) |
+
+**Manuais disponíveis; downloads 2.2 ainda não liberados. / Guides available; 2.2 downloads not yet enabled.**
 
 ## Estado da versão / Release status
 

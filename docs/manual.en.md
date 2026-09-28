@@ -1,10 +1,10 @@
 # VCore Pulse 2.2 User Guide
 
-[Português](manual.pt-BR.md) · [Build status](platforms-2.2.md) · [Official website](https://www.voigtcore.com.br/?lang=en)
+🇧🇷 [Português](manual.pt-BR.md) · 🇺🇸 [English](manual.en.md) · 🇪🇸 [Español](manual.es.md) · 🇨🇳 [简体中文](manual.zh-Hans.md) · 🇹🇼 [繁體中文](manual.zh-Hant.md)
 
 Pulse brings **Operational Memory** to a machine: it observes resources, connects events and retains context about changes and recovery. The operating system may change; the concept remains.
 
-> September 28, 2026. Version 2.2 is under validation. Building a package does not certify a platform. This repository contains public documentation, not private engine source.
+> September 28, 2026. Introducing Pulse 2.2. Version 2.2 downloads are not yet enabled. Building a package does not certify a platform. This repository contains public documentation, not private engine source.
 
 ## 1. Choose your installer
 
@@ -38,17 +38,17 @@ These are real screenshots already published for Pulse. The 2.2 interface may di
 
 A high score does not guarantee freedom from failure. Pulse supports analysis; it does not replace backups, antivirus or engineering judgement.
 
-## 4. Explore history
+## 4. Read charts and explore history
 
 ![Actual Pulse timeline](../screenshots/timeline.png)
 
-Use the timeline to connect changes, impacts and recoveries. Select dates and shifts with available observations. A comparison without enough samples is unavailable, not invented. History belongs to the machine's identity.
+Charts show measurement trends: check the selected period, sample availability and context. Use the timeline to connect changes, impacts and recoveries. Select dates and shifts with available observations. A comparison without enough samples is unavailable, not invented. History belongs to the machine's identity.
 
 ## 5. Reports, notifications and languages
 
 ![Pulse reports](../screenshots/reports.png)
 
-Choose an available period to view or generate reports. Email delivery requires configuration and recipient confirmation. Telegram also requires explicit setup. Check delivery status: requesting delivery is not proof of receipt.
+Choose an available period to view or generate reports. Pulse 2.2 improves period comparisons, executive summaries and event explanations, connecting charts to what happened. Periods without samples are not evidence of normal operation. Email delivery requires configuration and recipient confirmation. Telegram also requires explicit setup. Check delivery status: requesting delivery is not proof of receipt.
 
 Portuguese, English, Spanish, Simplified Chinese and Traditional Chinese are supported by the interface. Switching languages does not change identity or historical records.
 
@@ -89,3 +89,4 @@ Next priorities: Linux ARM64, then Windows ARM64. FreeBSD is future work. AIX, S
 [Technical support](mailto:suporte@voigtcore.com.br) · [Sales](mailto:comercial@voigtcore.com.br) · [Engineering](mailto:engenharia@voigtcore.com.br)
 
 Include OS, architecture, version/build, action and error code. Do not publish passwords, keys, tokens, operational databases or full payment details in issues. Review logs before sharing them.
+
