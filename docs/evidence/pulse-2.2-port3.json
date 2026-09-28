@@ -1,0 +1,109 @@
+{
+  "run": "https://github.com/VoigtCore/VCore-PULSE/actions/runs/36496567723",
+  "platforms": [
+    {
+      "platform": "darwin",
+      "architecture": "arm64",
+      "status": "PASS",
+      "commerceEndpoint": "loopback port 9 (disabled)",
+      "keyStorage": "disposable external keys; OS vault not covered by this test",
+      "steps": [
+        "INSTALL_PASS",
+        "HEALTH_PASS",
+        "CROSS_ORIGIN_DENIED",
+        "PDF_FIVE_LANGUAGES_PASS",
+        "SHUTDOWN_PASS",
+        "ENCRYPTED_DATABASE_PASS",
+        "REINSTALL_PRESERVES_DATABASE",
+        "RESTART_IDENTITY_HISTORY_PASS",
+        "MANIFEST_TAMPER_DENIED"
+      ],
+      "build": "2026.09.28-release-candidate.16-port.3",
+      "pdf": {
+        "pt-BR": 161705,
+        "en": 160416,
+        "es": 160880,
+        "zh-CN": 343402,
+        "zh-TW": 368025
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "arm64",
+      "status": "PASS",
+      "commerceEndpoint": "loopback port 9 (disabled)",
+      "keyStorage": "disposable external keys; OS vault not covered by this test",
+      "steps": [
+        "INSTALL_PASS",
+        "HEALTH_PASS",
+        "CROSS_ORIGIN_DENIED",
+        "PDF_FIVE_LANGUAGES_PASS",
+        "SHUTDOWN_PASS",
+        "ENCRYPTED_DATABASE_PASS",
+        "REINSTALL_PRESERVES_DATABASE",
+        "RESTART_IDENTITY_HISTORY_PASS",
+        "MANIFEST_TAMPER_DENIED"
+      ],
+      "build": "2026.09.28-release-candidate.16-port.3",
+      "pdf": {
+        "pt-BR": 160321,
+        "en": 159058,
+        "es": 159313,
+        "zh-CN": 335953,
+        "zh-TW": 360328
+      }
+    },
+    {
+      "platform": "linux",
+      "architecture": "x64",
+      "status": "PASS",
+      "commerceEndpoint": "loopback port 9 (disabled)",
+      "keyStorage": "disposable external keys; OS vault not covered by this test",
+      "steps": [
+        "INSTALL_PASS",
+        "HEALTH_PASS",
+        "CROSS_ORIGIN_DENIED",
+        "PDF_FIVE_LANGUAGES_PASS",
+        "SHUTDOWN_PASS",
+        "ENCRYPTED_DATABASE_PASS",
+        "REINSTALL_PRESERVES_DATABASE",
+        "RESTART_IDENTITY_HISTORY_PASS",
+        "MANIFEST_TAMPER_DENIED"
+      ],
+      "build": "2026.09.28-release-candidate.16-port.3",
+      "pdf": {
+        "pt-BR": 160162,
+        "en": 159013,
+        "es": 159174,
+        "zh-CN": 336283,
+        "zh-TW": 361294
+      }
+    },
+    {
+      "platform": "darwin",
+      "architecture": "x64",
+      "status": "PASS",
+      "commerceEndpoint": "loopback port 9 (disabled)",
+      "keyStorage": "disposable external keys; OS vault not covered by this test",
+      "steps": [
+        "INSTALL_PASS",
+        "HEALTH_PASS",
+        "CROSS_ORIGIN_DENIED",
+        "PDF_FIVE_LANGUAGES_PASS",
+        "SHUTDOWN_PASS",
+        "ENCRYPTED_DATABASE_PASS",
+        "REINSTALL_PRESERVES_DATABASE",
+        "RESTART_IDENTITY_HISTORY_PASS",
+        "MANIFEST_TAMPER_DENIED"
+      ],
+      "build": "2026.09.28-release-candidate.16-port.3",
+      "pdf": {
+        "pt-BR": 161818,
+        "en": 160496,
+        "es": 161078,
+        "zh-CN": 338399,
+        "zh-TW": 364569
+      }
+    }
+  ]
+}

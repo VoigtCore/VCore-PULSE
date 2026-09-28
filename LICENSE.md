@@ -16,4 +16,4 @@ Não é permitido:
 
 O software é fornecido em fase de testes, no estado em que se encontra, sem garantia de disponibilidade ininterrupta ou adequação a finalidade específica. Na extensão permitida pela lei, a VoigtCore não responde por danos indiretos decorrentes do uso da Public Beta.
 
-Para licenciamento comercial ou autorização de distribuição, contate [rafael@voigtcore.com.br](mailto:rafael@voigtcore.com.br).
+Para licenciamento comercial ou autorização de distribuição, contate [comercial@voigtcore.com.br](mailto:comercial@voigtcore.com.br).

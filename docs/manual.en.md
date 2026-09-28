@@ -1,18 +1,17 @@
 # VCore Pulse 2.2 User Guide
 
-> **[Open the visual website guide: chapters, search and expandable screenshots](https://www.voigtcore.com.br/manual/pulse/en/)**
+> **[Pulse 2.2 installers available](https://www.voigtcore.com.br/downloads/2.2.0/)** — The owner accepted Windows x64 v16 on two PCs, including Pix and a real international card purchase. Linux x64/ARM64 and macOS Intel/Apple Silicon have validation packages with native SQLCipher and bundled fonts. See the platform matrix for tests and requirements; user-machine manual acceptance is still pending. [Platforms](platforms-2.2.md).
 
 🇧🇷 [Português](manual.pt-BR.md) · 🇺🇸 [English](manual.en.md) · 🇪🇸 [Español](manual.es.md) · 🇨🇳 [简体中文](manual.zh-Hans.md) · 🇹🇼 [繁體中文](manual.zh-Hant.md)
 
 Pulse brings **Operational Memory** to a machine: it observes resources, connects events and retains context about changes and recovery. The operating system may change; the concept remains.
 
-> September 28, 2026. Introducing Pulse 2.2. Version 2.2 downloads are not yet enabled. Building a package does not certify a platform. This repository contains public documentation, not private engine source.
 
 ## 1. Choose your installer
 
-Use the [official website](https://www.voigtcore.com.br/?lang=en#download) or [GitHub releases](https://github.com/VoigtCore/VCore-PULSE/releases). Read the version, architecture and release status. Until an approved 2.2 release exists, the previous public download remains explicitly labelled with its own version.
+The owner accepted Windows x64 v16 on two PCs, including Pix and a real international card purchase. Linux x64/ARM64 and macOS Intel/Apple Silicon have validation packages with native SQLCipher and bundled fonts. See the platform matrix for tests and requirements; user-machine manual acceptance is still pending.
 
-Windows x64 and ARM64 are different targets. Intel and Apple Silicon Macs need different packages. Linux ARM64 is the next expansion priority, not an already certified release.
+[Pulse 2.2 installers available](https://www.voigtcore.com.br/downloads/2.2.0/)
 
 ## 2. Install or update on Windows
 
@@ -78,13 +77,13 @@ Database lifecycle management can retain earlier periods in managed segments. Pr
 
 ## 8. Linux and macOS
 
-Installers bundle the runtime, but 2.2 candidates require platform-specific acceptance. The SQLCipher adapter shipped in this iteration is Windows x64 only. Do not disable encryption just to claim a passing test. Avoid running installers as root by default; protect operational installations with verified backup and rollback.
+Download the correct package from the [downloads page](https://www.voigtcore.com.br/downloads/2.2.0/). Runtime and native SQLCipher are included. macOS uses Keychain. Linux desktop requires an unlocked Secret Service with `secret-tool`; headless servers can explicitly select `--headless-key-files`, using separate mode-0600 key files. This is not an encrypted OS vault. Keep the keys with backups. Do not use `sudo` or disable encryption. Distribution signatures and Apple notarization are not available. [Installation instructions](installation-2.2.en.md).
 
 ## 9. VLP and platform roadmap
 
 VLP connects ecosystem components under configured identity and permissions. Installing Pulse does not automatically connect the machine to a VCore Server. Integration availability depends on edition, configuration and validation.
 
-Next priorities: Linux ARM64, then Windows ARM64. FreeBSD is future work. AIX, Solaris, HP-UX and z/OS require demand and specific engineering. This roadmap is not a delivered compatibility matrix.
+Linux ARM64 now has a validation package. Windows ARM64 is the next extension; FreeBSD and enterprise Unix remain future work, with no installer in this release.
 
 ## 10. Support
 

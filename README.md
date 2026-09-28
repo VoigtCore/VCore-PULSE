@@ -24,15 +24,19 @@ Capítulos, busca e capturas ampliáveis em uma experiência própria do Pulse. 
 | 🇨🇳 简体中文 | [打开手册](https://www.voigtcore.com.br/manual/pulse/zh-Hans/) |
 | 🇹🇼 繁體中文 | [開啟手冊](https://www.voigtcore.com.br/manual/pulse/zh-Hant/) |
 
-**Manuais disponíveis; downloads 2.2 ainda não liberados. / Guides available; 2.2 downloads not yet enabled.**
+**[Instaladores e guias / Installers and guides](https://www.voigtcore.com.br/downloads/2.2.0/)** · [GitHub Release](https://github.com/VoigtCore/VCore-PULSE/releases/tag/v2.2.0-rc.16)
 
 ## Estado da versão / Release status
 
-**2.2.0: release candidate, em validação / under validation.** Documentação atualizada em 28/09/2026. Os candidatos locais não têm assinatura comercial de distribuição. Windows x64 foi ensaiado em instalação isolada e runtime; Windows 11 em máquina limpa, macOS e a distribuição Linux protegida ainda têm verificações pendentes. Consulte a [matriz](docs/platforms-2.2.md).
+Windows x64: **v16 congelado**, aprovado pelo responsável em dois PCs. Pix e compra real com cartão internacional confirmados pelo responsável. O binário Windows conserva seu SHA-256.
 
-A [release pública 2.1.1](https://github.com/VoigtCore/VCore-PULSE/releases/tag/v2.1.1) mantém sua identidade. Esta atualização da documentação não renomeia binários antigos nem anuncia candidatos não homologados como downloads estáveis.
+Linux x64, **Linux ARM64**, macOS Intel e Apple Silicon: pacotes de validação `v16-port.3`, com SQLCipher nativo e fontes para relatórios nos cinco idiomas. Motores, regras de licença e compras preservados. Consulte a [matriz de testes e requisitos](docs/platforms-2.2.md).
 
-The [public 2.1.1 release](https://github.com/VoigtCore/VCore-PULSE/releases/tag/v2.1.1) keeps its identity. This documentation update does not relabel older binaries or announce unverified candidates as stable downloads.
+Windows x64: **frozen v16**, owner-accepted on two PCs, including Pix and a real international card purchase. Linux x64/ARM64 and macOS Intel/Apple Silicon: `v16-port.3` validation packages with native SQLCipher and fonts for five report languages. See the [test and requirements matrix](docs/platforms-2.2.md).
+
+**Assinatura de distribuição e notarização Apple pendentes. / Distribution signing and Apple notarization pending.** A release fica marcada como pré-lançamento; isso não habilita atualização automática. / The release is marked as a prerelease and does not enable automatic updates.
+
+[Instalação em português](docs/installation-2.2.pt-BR.md) · [English installation guide](docs/installation-2.2.en.md)
 
 ## Comece pelo manual / Start with the manual
 
@@ -46,9 +50,9 @@ The [public 2.1.1 release](https://github.com/VoigtCore/VCore-PULSE/releases/tag
 
 ## Próximas plataformas / Next platforms
 
-Linux ARM64 é a próxima prioridade; Windows ARM64 vem depois. FreeBSD e Unix enterprise são direções futuras condicionadas à demanda, não suporte anunciado. O sistema operacional muda; a Memória Operacional permanece.
+Linux ARM64 já tem pacote para validação. Windows ARM64 é a próxima expansão; FreeBSD e Unix enterprise permanecem futuros, sem instalador nesta entrega.
 
-Linux ARM64 is the next priority, followed by Windows ARM64. FreeBSD and enterprise Unix remain demand-driven future work, not advertised support. The operating system changes; Operational Memory remains.
+Linux ARM64 now has a validation package. Windows ARM64 is the next extension; FreeBSD and enterprise Unix remain future work, with no installer in this release.
 
 ## Contato / Contact
 

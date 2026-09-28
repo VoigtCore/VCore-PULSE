@@ -1,18 +1,17 @@
 # Manual de VCore Pulse 2.2
 
-> **[Abrir el manual visual del sitio: capítulos, búsqueda e imágenes ampliables](https://www.voigtcore.com.br/manual/pulse/es/)**
+> **[Instaladores de Pulse 2.2 disponibles](https://www.voigtcore.com.br/downloads/2.2.0/)** — El responsable validó Windows x64 v16 en dos equipos, con Pix y una compra real con tarjeta internacional. Linux x64/ARM64 y macOS Intel/Apple Silicon tienen paquetes de validación con SQLCipher nativo y fuentes incluidas. Consulta las pruebas y requisitos en la matriz; la aceptación manual en equipos del usuario sigue pendiente. [Platforms](platforms-2.2.md).
 
 🇧🇷 [Português](manual.pt-BR.md) · 🇺🇸 [English](manual.en.md) · 🇪🇸 **Español** · 🇨🇳 [简体中文](manual.zh-Hans.md) · 🇹🇼 [繁體中文](manual.zh-Hant.md)
 
 **La Memoria Operativa empieza en tu máquina.** Pulse observa los recursos, relaciona cambios, impactos y recuperaciones, y conserva el contexto para entender lo que ocurrió. El sistema operativo cambia; el concepto permanece.
 
-> Edición del 28/09/2026. Presentación de Pulse 2.2. Las descargas 2.2 todavía no están habilitadas. Esta guía prepara el uso de la versión; no certifica plataformas ni anuncia disponibilidad comercial. Consulta la [matriz de plataformas](platforms-2.2.md). Este repositorio contiene documentación pública, no el código privado de los motores.
 
 ## 1. Antes de instalar
 
-Cuando se habilite la versión, descarga únicamente desde el [sitio oficial](https://www.voigtcore.com.br/?lang=es#pulse22-manual) o las [releases oficiales](https://github.com/VoigtCore/VCore-PULSE/releases). Comprueba la versión, arquitectura y estado del archivo. Una descarga anterior no se convierte en 2.2 por aparecer junto a este manual.
+El responsable validó Windows x64 v16 en dos equipos, con Pix y una compra real con tarjeta internacional. Linux x64/ARM64 y macOS Intel/Apple Silicon tienen paquetes de validación con SQLCipher nativo y fuentes incluidas. Consulta las pruebas y requisitos en la matriz; la aceptación manual en equipos del usuario sigue pendiente.
 
-Windows x64 no equivale a Windows ARM64. Los Mac Intel y Apple Silicon necesitan paquetes distintos. Linux ARM64 es la próxima prioridad de expansión, no una plataforma ya homologada.
+[Instaladores de Pulse 2.2 disponibles](https://www.voigtcore.com.br/downloads/2.2.0/)
 
 ## 2. Instalar o actualizar en Windows
 
@@ -82,13 +81,13 @@ El producto puede organizar períodos antiguos en archivos históricos. No elimi
 
 ## 8. Linux y macOS
 
-Los candidatos están empaquetados, pero necesitan homologación por plataforma. El adaptador SQLCipher validado en esta entrega es Windows x64; Linux requiere su adaptador nativo y la gestión de claves, y macOS requiere pruebas en Mac. No desactives el cifrado para declarar una instalación aprobada. No sustituyas una instalación operativa por un candidato sin copia y reversión verificadas.
+Descarga el paquete correcto desde la [página de descargas](https://www.voigtcore.com.br/downloads/2.2.0/). Incluye el runtime y SQLCipher nativo. macOS utiliza el Llavero. Linux de escritorio requiere Secret Service desbloqueado y `secret-tool`; sin interfaz gráfica puedes elegir explícitamente `--headless-key-files`, con claves en archivos separados con permisos 0600. No equivale a una bóveda cifrada del sistema. Conserva las claves junto a las copias. No uses `sudo` ni desactives el cifrado. No hay firma de distribución ni notarización Apple.
 
 ## 9. VLP y próximos pasos
 
 VLP prepara la integración del ecosistema con identidad y permisos. Instalar Pulse no lo conecta automáticamente a VCore Server; cada integración depende de su edición, configuración y validación.
 
-Linux ARM64 tiene prioridad, seguido de Windows ARM64. FreeBSD y los sistemas Unix empresariales son posibilidades futuras condicionadas a la demanda, no soporte disponible.
+Linux ARM64 ya tiene un paquete de validación. Windows ARM64 es la próxima ampliación; FreeBSD y Unix enterprise son planes futuros sin instalador en esta entrega.
 
 ## 10. Soporte
 

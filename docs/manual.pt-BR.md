@@ -1,18 +1,17 @@
 # Manual do VCore Pulse 2.2
 
-> **[Abrir o manual visual no site: capítulos, busca e imagens ampliáveis](https://www.voigtcore.com.br/manual/pulse/pt-BR/)**
+> **[Instaladores Pulse 2.2 disponíveis](https://www.voigtcore.com.br/downloads/2.2.0/)** — Windows x64 v16 foi aprovado pelo responsável em dois PCs, incluindo Pix e compra real com cartão internacional. Linux x64/ARM64 e macOS Intel/Apple Silicon têm pacotes de validação com SQLCipher nativo e fontes incluídas. Consulte os testes e requisitos na matriz; testes manuais em máquinas do usuário continuam pendentes. [Platforms](platforms-2.2.md).
 
 🇧🇷 [Português](manual.pt-BR.md) · 🇺🇸 [English](manual.en.md) · 🇪🇸 [Español](manual.es.md) · 🇨🇳 [简体中文](manual.zh-Hans.md) · 🇹🇼 [繁體中文](manual.zh-Hant.md)
 
 O Pulse leva **Memória Operacional** à máquina: observa recursos, relaciona acontecimentos e preserva o contexto do que mudou e de como a máquina se recuperou. O sistema operacional pode mudar; o conceito permanece.
 
-> Edição de 28/09/2026. Apresentação do Pulse 2.2. Os downloads 2.2 ainda não estão liberados. Um pacote gerado não significa plataforma homologada. Consulte a matriz antes de instalar. Este repositório contém documentação pública, não o código privado dos motores.
 
 ## 1. Escolha o pacote certo
 
-Baixe somente pelo [site oficial](https://www.voigtcore.com.br/#download) ou pelas [releases deste repositório](https://github.com/VoigtCore/VCore-PULSE/releases). Confira versão, plataforma e avisos do arquivo. Enquanto a 2.2 não tiver uma release aprovada, o download público anterior continua identificado pela sua própria versão.
+Windows x64 v16 foi aprovado pelo responsável em dois PCs, incluindo Pix e compra real com cartão internacional. Linux x64/ARM64 e macOS Intel/Apple Silicon têm pacotes de validação com SQLCipher nativo e fontes incluídas. Consulte os testes e requisitos na matriz; testes manuais em máquinas do usuário continuam pendentes.
 
-Windows exige x64. Não instale o pacote Windows x64 em ARM64 presumindo suporte. macOS Intel e Apple Silicon usam pacotes distintos. Linux ARM64 é a próxima prioridade de expansão, não um download já homologado.
+[Instaladores Pulse 2.2 disponíveis](https://www.voigtcore.com.br/downloads/2.2.0/)
 
 ## 2. Instalação e atualização no Windows
 
@@ -78,13 +77,13 @@ O ciclo de vida do banco pode preservar períodos anteriores em arquivos adminis
 
 ## 8. Linux e macOS
 
-Os scripts de instalação empacotam o runtime, mas os candidatos 2.2 ainda exigem homologação específica. O adaptador SQLCipher distribuído nesta rodada é Windows x64. Não desative a criptografia apenas para considerar o teste aprovado. Não execute scripts como root por hábito e não use um candidato para substituir uma instalação operacional sem backup e rollback verificados.
+Baixe o pacote correto na [página de downloads](https://www.voigtcore.com.br/downloads/2.2.0/). O runtime e o SQLCipher nativo estão incluídos. No macOS, as chaves usam o Acesso às Chaves. No Linux desktop, use Secret Service desbloqueado e `secret-tool`; para servidor sem interface, `--headless-key-files` é uma escolha explícita com arquivos de chave separados e permissão 0600. Isso não equivale a um cofre criptografado do sistema. Preserve as chaves com o backup. Não use `sudo` nem desative criptografia. Instaladores não têm assinatura de distribuição ou notarização Apple. [Instruções de instalação](installation-2.2.pt-BR.md).
 
 ## 9. VLP e evolução do ecossistema
 
 VLP é o caminho de integração entre componentes do ecossistema, sob identidade e permissões configuradas. Instalar o Pulse não conecta automaticamente a máquina a um VCore Server. A disponibilidade de uma integração depende da edição, configuração e validação correspondente.
 
-Prioridades: Linux ARM64, depois Windows ARM64; FreeBSD é futuro. AIX, Solaris, HP-UX e z/OS dependem de demanda e trabalho específico. Esta lista é direção de evolução, não matriz de compatibilidade entregue.
+Linux ARM64 já tem pacote para validação. Windows ARM64 é a próxima expansão; FreeBSD e Unix enterprise permanecem futuros, sem instalador nesta entrega.
 
 ## 10. Suporte
 

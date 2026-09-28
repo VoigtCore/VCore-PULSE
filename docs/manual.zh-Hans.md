@@ -1,18 +1,17 @@
 # VCore Pulse 2.2 使用手册
 
-> **[打开网站图文手册：章节导航、搜索和可放大截图](https://www.voigtcore.com.br/manual/pulse/zh-Hans/)**
+> **[Pulse 2.2 安装程序已提供](https://www.voigtcore.com.br/downloads/2.2.0/)** — 负责人已在两台电脑上验收 Windows x64 v16，包括 Pix 和一次真实国际信用卡付款。Linux x64/ARM64 和 macOS Intel/Apple Silicon 提供验证包，内含原生 SQLCipher 和字体。请查看平台矩阵中的测试及要求；用户设备上的手动验收仍待完成。 [Platforms](platforms-2.2.md).
 
 🇧🇷 [Português](manual.pt-BR.md) · 🇺🇸 [English](manual.en.md) · 🇪🇸 [Español](manual.es.md) · 🇨🇳 **简体中文** · 🇹🇼 [繁體中文](manual.zh-Hant.md)
 
 **让机器拥有运行记忆。** Pulse 观察资源使用情况，将变化、影响与恢复过程联系起来，保留理解机器运行所需的上下文。操作系统可以改变，运行记忆的理念始终如一。
 
-> 2026 年 9 月 28 日版。本文介绍 Pulse 2.2，**2.2 下载尚未开放**。本手册为后续使用提供指引，不代表平台已通过验收或已正式商用。请查看[平台状态](platforms-2.2.md)。本仓库仅提供公开文档，不包含私有引擎源代码。
 
 ## 1. 安装前的准备
 
-版本开放后，请仅从[官方网站](https://www.voigtcore.com.br/?lang=zh-Hans#pulse22-manual)或[官方发布页面](https://github.com/VoigtCore/VCore-PULSE/releases)下载。核对版本、操作系统、处理器架构和发布状态。旧版下载即使与本手册同时出现，也仍然是其标注的版本。
+负责人已在两台电脑上验收 Windows x64 v16，包括 Pix 和一次真实国际信用卡付款。Linux x64/ARM64 和 macOS Intel/Apple Silicon 提供验证包，内含原生 SQLCipher 和字体。请查看平台矩阵中的测试及要求；用户设备上的手动验收仍待完成。
 
-Windows x64 与 Windows ARM64 不同。Intel Mac 和 Apple Silicon Mac 需要不同的软件包。Linux ARM64 是下一阶段的优先目标，并非已通过验收的平台。
+[Pulse 2.2 安装程序已提供](https://www.voigtcore.com.br/downloads/2.2.0/)
 
 ## 2. 在 Windows 上安装或更新
 
@@ -82,13 +81,13 @@ v11 候选版本修复了已审核升级路径中旧安装缺少发布清单时�
 
 ## 8. Linux 与 macOS
 
-候选包已生成，但仍需针对各平台验收。本轮已验证的 SQLCipher 适配器是 Windows x64 版本；Linux 仍需原生适配器和密钥管理验证，macOS 需要在 Mac 上测试。不要通过关闭加密来宣称安装成功。在没有验证备份与回滚流程之前，不要用候选包替换正在运行的安装。
+请在[下载页面](https://www.voigtcore.com.br/downloads/2.2.0/)选择正确的版本。安装包包含运行环境和原生 SQLCipher。macOS 使用钥匙串。Linux 桌面需要已解锁的 Secret Service 和 `secret-tool`；无图形界面时可明确选择 `--headless-key-files`，将密钥存放于权限为 0600 的独立文件中。这并非操作系统加密密钥库。请随备份保存密钥。不要使用 `sudo` 或关闭加密。尚无发行签名或 Apple 公证。
 
 ## 9. VLP 与后续发展
 
 VLP 为生态系统集成提供身份与权限基础。安装 Pulse 不会自动连接 VCore Server。每项集成都取决于版本、配置及验证状态。
 
-下一步优先考虑 Linux ARM64，其后是 Windows ARM64。FreeBSD 和企业 Unix 系统属于取决于需求的未来方向，并非当前支持的平台。
+Linux ARM64 已提供验证包。Windows ARM64 是下一阶段；FreeBSD 和企业 Unix 仍是未来计划，本次没有安装程序。
 
 ## 10. 联系支持
 

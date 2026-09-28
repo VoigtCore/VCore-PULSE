@@ -1,5 +1,11 @@
 # Limitações Conhecidas
 
+## Pulse 2.2 — distribuição atual
+
+Consulte a [matriz 2.2](platforms-2.2.md) para os pacotes Windows x64, Linux x64/ARM64 e macOS Intel/Apple Silicon. A aceitação automatizada não substitui o teste dos serviços e cofres nas máquinas do usuário. Assinatura de distribuição e notarização Apple continuam pendentes. As notas abaixo preservam o contexto da Public Beta anterior.
+
+See the [2.2 matrix](platforms-2.2.md) for current builds and remaining acceptance work. Distribution signing and Apple notarization are pending. The notes below retain the earlier Public Beta context.
+
 ## Public Beta
 
 Esta versão ainda está calibrando o algoritmo de interpretação da Saúde Operacional. A RC2 já utiliza um baseline operacional adaptativo; a calibração temporal ampliada, baseada nos resultados de diferentes máquinas da Public Beta, será consolidada na próxima atualização.
