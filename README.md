@@ -2,7 +2,7 @@
 
 **Memória Operacional para a máquina. / Operational Memory for your machine.**
 
-🇧🇷 [Português](docs/manual.pt-BR.md) · 🇺🇸 [English](docs/manual.en.md) · 🇪🇸 [Español](docs/manual.es.md) · 🇨🇳 [简体中文](docs/manual.zh-Hans.md) · 🇹🇼 [繁體中文](docs/manual.zh-Hant.md)
+🇧🇷 [Português](https://www.voigtcore.com.br/manual/pulse/pt-BR/) · 🇺🇸 [English](https://www.voigtcore.com.br/manual/pulse/en/) · 🇪🇸 [Español](https://www.voigtcore.com.br/manual/pulse/es/) · 🇨🇳 [简体中文](https://www.voigtcore.com.br/manual/pulse/zh-Hans/) · 🇹🇼 [繁體中文](https://www.voigtcore.com.br/manual/pulse/zh-Hant/)
 
 ![Painel real do VCore Pulse; captura pública de referência](screenshots/dashboard.png)
 
@@ -10,15 +10,19 @@ O Pulse observa recursos, relaciona mudanças e recuperações e preserva a traj
 
 Pulse observes resources, connects changes and recoveries, and preserves the machine's trajectory. Version 2.2 advances operational context, process identity, memory continuity, reports, licensing and payments.
 
+## Manual visual no site / Visual website guide
+
+Capítulos, busca e capturas ampliáveis em uma experiência própria do Pulse. O GitHub mantém a referência pública. / Chapters, search and expandable screenshots in a dedicated Pulse guide. GitHub remains the public reference.
+
 ## Comece no seu idioma / Start in your language
 
 | Idioma / Language | Manual |
 |---|---|
-| 🇧🇷 Português | [Abrir manual](docs/manual.pt-BR.md) |
-| 🇺🇸 English | [Open guide](docs/manual.en.md) |
-| 🇪🇸 Español | [Abrir manual](docs/manual.es.md) |
-| 🇨🇳 简体中文 | [打开手册](docs/manual.zh-Hans.md) |
-| 🇹🇼 繁體中文 | [開啟手冊](docs/manual.zh-Hant.md) |
+| 🇧🇷 Português | [Abrir manual](https://www.voigtcore.com.br/manual/pulse/pt-BR/) |
+| 🇺🇸 English | [Open guide](https://www.voigtcore.com.br/manual/pulse/en/) |
+| 🇪🇸 Español | [Abrir manual](https://www.voigtcore.com.br/manual/pulse/es/) |
+| 🇨🇳 简体中文 | [打开手册](https://www.voigtcore.com.br/manual/pulse/zh-Hans/) |
+| 🇹🇼 繁體中文 | [開啟手冊](https://www.voigtcore.com.br/manual/pulse/zh-Hant/) |
 
 **Manuais disponíveis; downloads 2.2 ainda não liberados. / Guides available; 2.2 downloads not yet enabled.**
 
@@ -38,7 +42,7 @@ The [public 2.1.1 release](https://github.com/VoigtCore/VCore-PULSE/releases/tag
 4. Acompanhe saúde, processos, histórico e relatórios / Explore health, processes, history and reports.
 5. Configure notificações e licença / Configure notifications and licensing.
 
-[Guia passo a passo em português](docs/manual.pt-BR.md) · [Step-by-step English guide](docs/manual.en.md)
+[Guia passo a passo em português](https://www.voigtcore.com.br/manual/pulse/pt-BR/) · [Step-by-step English guide](https://www.voigtcore.com.br/manual/pulse/en/)
 
 ## Próximas plataformas / Next platforms
 

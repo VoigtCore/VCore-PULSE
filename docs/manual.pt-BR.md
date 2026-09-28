@@ -1,5 +1,7 @@
 # Manual do VCore Pulse 2.2
 
+> **[Abrir o manual visual no site: capítulos, busca e imagens ampliáveis](https://www.voigtcore.com.br/manual/pulse/pt-BR/)**
+
 🇧🇷 [Português](manual.pt-BR.md) · 🇺🇸 [English](manual.en.md) · 🇪🇸 [Español](manual.es.md) · 🇨🇳 [简体中文](manual.zh-Hans.md) · 🇹🇼 [繁體中文](manual.zh-Hant.md)
 
 O Pulse leva **Memória Operacional** à máquina: observa recursos, relaciona acontecimentos e preserva o contexto do que mudou e de como a máquina se recuperou. O sistema operacional pode mudar; o conceito permanece.

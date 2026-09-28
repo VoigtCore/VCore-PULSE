@@ -1,5 +1,7 @@
 # Manual de VCore Pulse 2.2
 
+> **[Abrir el manual visual del sitio: capítulos, búsqueda e imágenes ampliables](https://www.voigtcore.com.br/manual/pulse/es/)**
+
 🇧🇷 [Português](manual.pt-BR.md) · 🇺🇸 [English](manual.en.md) · 🇪🇸 **Español** · 🇨🇳 [简体中文](manual.zh-Hans.md) · 🇹🇼 [繁體中文](manual.zh-Hant.md)
 
 **La Memoria Operativa empieza en tu máquina.** Pulse observa los recursos, relaciona cambios, impactos y recuperaciones, y conserva el contexto para entender lo que ocurrió. El sistema operativo cambia; el concepto permanece.

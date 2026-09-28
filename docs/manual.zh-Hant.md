@@ -1,5 +1,7 @@
 # VCore Pulse 2.2 使用手冊
 
+> **[開啟網站圖文手冊：章節導覽、搜尋和可放大截圖](https://www.voigtcore.com.br/manual/pulse/zh-Hant/)**
+
 🇧🇷 [Português](manual.pt-BR.md) · 🇺🇸 [English](manual.en.md) · 🇪🇸 [Español](manual.es.md) · 🇨🇳 [简体中文](manual.zh-Hans.md) · 🇹🇼 **繁體中文**
 
 **讓機器擁有運作記憶。** Pulse 觀察資源使用情況，串連變化、影響與恢復過程，保留理解機器運作所需的脈絡。作業系統可以改變，運作記憶的理念始終如一。
