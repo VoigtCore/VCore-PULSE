@@ -19,7 +19,7 @@ try{
  const health=await start();assert.equal(health.status,'ok');proof.steps.push('HEALTH_PASS');
  const about=await (await request('/api/pulse/support/about')).json();assert.equal(about.build,'2026.09.28-release-candidate.16-port.1');proof.build=about.build;
  const malicious=await request('/api/pulse/license/customer',{method:'POST',headers:{Origin:'https://untrusted.invalid','Content-Type':'application/json'},body:'{}'});assert.equal(malicious.status,403);proof.steps.push('CROSS_ORIGIN_DENIED');
- const pdf=await request('/api/pulse/report?period=24h&format=pdf&lang=pt-BR');assert.equal(pdf.status,200);const bytes=Buffer.from(await pdf.arrayBuffer());assert.equal(bytes.subarray(0,5).toString(),'%PDF-');proof.pdfBytes=bytes.length;proof.steps.push('PDF_PASS');
+ const pdf=await request('/api/pulse/report?period=24h&format=pdf&lang=pt-BR');if(pdf.status!==200)throw Error('PDF '+pdf.status+': '+await pdf.text());const bytes=Buffer.from(await pdf.arrayBuffer());assert.equal(bytes.subarray(0,5).toString(),'%PDF-');proof.pdfBytes=bytes.length;proof.steps.push('PDF_PASS');
  await stop();proof.steps.push('SHUTDOWN_PASS');
  assert.notEqual(fs.readFileSync(path.join(data,'pulse.db')).subarray(0,16).toString(),'SQLite format 3\0');proof.steps.push('ENCRYPTED_DATABASE_PASS');
  const dbHash=crypto.createHash('sha256').update(fs.readFileSync(path.join(data,'pulse.db'))).digest('hex');
