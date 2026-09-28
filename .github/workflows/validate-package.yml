@@ -6,7 +6,9 @@ on:
         description: 'JSON array of runner, asset and SHA-256 (approved release draft assets only)'
         required: true
 permissions:
-  contents: read
+  # GitHub restricts assets of unpublished drafts to callers with push access.
+  # The token is supplied only to the retrieval step, never to the installer.
+  contents: write
 jobs:
   validate:
     strategy:
