@@ -21,7 +21,7 @@ try{
  const malicious=await request('/api/pulse/license/customer',{method:'POST',headers:{Origin:'https://untrusted.invalid','Content-Type':'application/json'},body:'{}'});assert.equal(malicious.status,403);proof.steps.push('CROSS_ORIGIN_DENIED');
  proof.pdf={};
  for(const locale of ['pt-BR','en','es','zh-CN','zh-TW']){
-  const pdf=await request('/api/pulse/report?period=24h&format=pdf&lang='+locale);if(pdf.status!==200)throw Error('PDF '+locale+' '+pdf.status+': '+await pdf.text());const bytes=Buffer.from(await pdf.arrayBuffer());assert.equal(bytes.subarray(0,5).toString(),'%PDF-');proof.pdf[locale]=bytes.length;
+  const pdf=await request('/api/pulse/report?period=24h&format=pdf&lang='+locale);if(pdf.status!==200){const j=await(await request('/api/pulse/report?period=24h&format=json&lang='+locale)).json();const leaks=[];function walk(v,k=''){if(typeof v==='string'&&/relatório|episódios|recuperação|evidência|memória|saúde|hipótese|informe|confianza/i.test(v))leaks.push({path:k,text:v.slice(0,400)});else if(v&&typeof v==='object')for(const [n,x]of Object.entries(v))walk(x,k+'.'+n);}walk(j);proof.localizationDiagnostic=leaks;throw Error('PDF '+locale+' '+pdf.status+': '+await pdf.text());}const bytes=Buffer.from(await pdf.arrayBuffer());assert.equal(bytes.subarray(0,5).toString(),'%PDF-');proof.pdf[locale]=bytes.length;
  }
  proof.steps.push('PDF_FIVE_LANGUAGES_PASS');
  await stop();proof.steps.push('SHUTDOWN_PASS');
