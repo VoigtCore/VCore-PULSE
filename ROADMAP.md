@@ -1,29 +1,14 @@
-# Roadmap
+# Roadmap — VCore Pulse
 
-O roadmap indica direção de produto e pode evoluir a partir dos resultados da Public Beta.
+[Português](docs/manual.pt-BR.md) · [English](docs/manual.en.md)
 
-## RC2 — Public Beta
+1. Fechar a aceitação e distribuição da 2.2 Windows x64 / Complete Windows x64 acceptance and distribution.
+2. Homologar os candidatos Linux x64 e macOS x64/ARM64 / Validate Linux x64 and macOS x64/ARM64 candidates.
+3. Linux ARM64: próxima expansão, sem bloquear a 2.2 Windows / Next expansion without delaying Windows 2.2.
+4. Windows ARM64: prioridade posterior / Later priority.
+5. FreeBSD: estudo futuro / Future study.
+6. AIX, Solaris, HP-UX, z/OS: somente com demanda / Only with commercial demand.
 
-- Distribuição pública controlada.
-- Coleta de feedback e validação em diferentes perfis de hardware.
-- Baseline operacional adaptativo inicial.
+Não são datas ou suporte prometidos. / These are not promised dates or supported targets.
 
-## RC3 — Calibração Temporal
-
-- Refinamento dos limiares por diversidade de máquinas.
-- Validação longitudinal da identidade operacional.
-- Consolidação dos resultados da Public Beta.
-
-## 2.0 Final
-
-- Estabilização e assinatura dos pacotes.
-- Documentação definitiva de distribuição.
-
-## 2.1
-
-- Evolução dos comparativos e recomendações.
-- Aprimoramentos orientados por feedback.
-
-## 3.0
-
-- Integração ampliada ao VCore Control Plane e gestão de frota.
+O sistema operacional muda. A Memória Operacional permanece. / The operating system changes. Operational Memory remains.
