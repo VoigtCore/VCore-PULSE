@@ -1,6 +1,6 @@
 import fs from 'node:fs';import os from 'node:os';import path from 'node:path';import crypto from 'node:crypto';import assert from 'node:assert/strict';import {spawn,spawnSync} from 'node:child_process';
 const out=path.resolve('validation-output');fs.mkdirSync(out,{recursive:true});
-const root=fs.mkdtempSync(path.join(os.tmpdir(),'pulse-package-proof-')),home=path.join(root,'home'),app=path.join(root,'install'),data=path.join(root,'data');fs.mkdirSync(home);
+const root=fs.realpathSync(fs.mkdtempSync(path.join(os.tmpdir(),'pulse-package-proof-'))),home=path.join(root,'home'),app=path.join(root,'install'),data=path.join(root,'data');fs.mkdirSync(home);
 const keyDir=path.join(root,'test-keys');fs.mkdirSync(keyDir,{mode:0o700});
 for(const name of ['database','master'])fs.writeFileSync(path.join(keyDir,name),crypto.randomBytes(32).toString('base64'),{mode:0o600});
 const env={...process.env,HOME:home,VCORE_INSTALL_ROOT:app,VCORE_DATA_ROOT:data,VCORE_NO_BROWSER:'1',PULSE_HOST:'127.0.0.1',PULSE_PORT:'4198',VCORE_COMMERCE_URL:'http://127.0.0.1:9',VCORE_COMMERCE_PORTAL_URL:'http://127.0.0.1:9',PULSE_DATABASE_KEY_FILE:path.join(keyDir,'database'),PULSE_MASTER_KEY_FILE:path.join(keyDir,'master')};
@@ -13,7 +13,7 @@ async function start(){
  const log=fs.openSync(path.join(root,'runtime.log'),'a');child=spawn(path.join(app,'start-vcore-pulse.sh'),[],{env,stdio:['ignore',log,log]});fs.closeSync(log);
  for(let i=0;i<90;i++){if(child.exitCode!==null)throw Error('Runtime exited: '+fs.readFileSync(path.join(root,'runtime.log'),'utf8').slice(-3000));try{const r=await request('/api/pulse/health');if(r.ok)return await r.json();}catch{}await delay(1000);}throw Error('Runtime health timeout');
 }
-async function stop(){const r=await request('/api/pulse/shutdown',{method:'POST'});assert.equal(r.status,200);for(let i=0;i<30&&child.exitCode===null;i++)await delay(500);assert.notEqual(child.exitCode,null,'Normal shutdown required');}
+async function stop(){const r=await request('/api/pulse/shutdown',{method:'POST'});assert.equal(r.status,202);for(let i=0;i<30&&child.exitCode===null;i++)await delay(500);assert.notEqual(child.exitCode,null,'Normal shutdown required');}
 try{
  const installed=exec('sh',[path.resolve('installer.sh'),'--no-start']);assert.match(installed,/Installed VCore Pulse 2.2/);proof.steps.push('INSTALL_PASS');
  const health=await start();assert.equal(health.status,'ok');proof.steps.push('HEALTH_PASS');
