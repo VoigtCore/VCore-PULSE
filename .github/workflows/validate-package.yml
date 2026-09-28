@@ -1,0 +1,39 @@
+name: Validate packaged Pulse on native systems
+on:
+  workflow_dispatch:
+    inputs:
+      targets:
+        description: 'JSON array of runner, asset and SHA-256 (approved release draft assets only)'
+        required: true
+permissions:
+  contents: read
+jobs:
+  validate:
+    strategy:
+      fail-fast: false
+      matrix:
+        include: ${{ fromJSON(inputs.targets) }}
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: 24.21.0
+      - name: Retrieve approved installer from release draft
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ASSET_ID: ${{ matrix.asset }}
+          ASSET_SHA: ${{ matrix.sha256 }}
+        run: node tools/native-crypto/fetch-installer.mjs
+      - name: Install, start, report, restart and verify encryption
+        run: node tools/native-crypto/smoke-package.mjs
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: pulse-validation-${{ matrix.runner }}
+          path: validation-output/
+          retention-days: 14
+          if-no-files-found: error
