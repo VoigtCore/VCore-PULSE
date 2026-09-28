@@ -17,7 +17,7 @@ async function stop(){const r=await request('/api/pulse/shutdown',{method:'POST'
 try{
  const installed=exec('sh',[path.resolve('installer.sh'),'--no-start']);assert.match(installed,/Installed VCore Pulse 2.2/);proof.steps.push('INSTALL_PASS');
  const health=await start();assert.equal(health.status,'ok');proof.steps.push('HEALTH_PASS');
- const about=await (await request('/api/pulse/support/about')).json();assert.equal(about.build,'2026.09.28-release-candidate.16-port.2');proof.build=about.build;
+ const about=await (await request('/api/pulse/support/about')).json();assert.equal(about.build,'2026.09.28-release-candidate.16-port.3');proof.build=about.build;
  const malicious=await request('/api/pulse/license/customer',{method:'POST',headers:{Origin:'https://untrusted.invalid','Content-Type':'application/json'},body:'{}'});assert.equal(malicious.status,403);proof.steps.push('CROSS_ORIGIN_DENIED');
  proof.pdf={};
  for(const locale of ['pt-BR','en','es','zh-CN','zh-TW']){
