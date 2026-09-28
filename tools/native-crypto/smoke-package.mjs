@@ -32,5 +32,5 @@ try{
  const manifest=path.join(app,'pulse/vendor/sqlcipher',process.platform+'-'+process.arch,'RUNTIME-MANIFEST.json');fs.appendFileSync(manifest,' ');
  const node=path.join(app,'runtime/bin/node');const tamper=spawnSync(node,['--input-type=module','-e',`const m=await import(${JSON.stringify('file://'+path.join(app,'pulse/sqlite-runtime.js'))});console.log(m.probeSqlCipherRuntime().errorCode);`],{env,encoding:'utf8'});assert.match(tamper.stdout,/SQLCIPHER_ARTIFACT_INTEGRITY_FAILED/);proof.steps.push('MANIFEST_TAMPER_DENIED');
  proof.status='PASS';
-}catch(error){proof.status='FAIL';proof.error=String(error.message);process.exitCode=1;}
+}catch(error){proof.status='FAIL';proof.error=String(error.message);if(fs.existsSync(path.join(root,'runtime.log')))proof.runtimeDiagnostic=fs.readFileSync(path.join(root,'runtime.log'),'utf8').slice(-7000);process.exitCode=1;}
 finally{if(child&&child.exitCode===null)child.kill('SIGTERM');fs.writeFileSync(path.join(out,'proof.json'),JSON.stringify(proof,null,2));console.log(JSON.stringify(proof));}
