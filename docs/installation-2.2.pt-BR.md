@@ -7,7 +7,7 @@
 
 ## Windows 10/11 x64
 
-Abra `VCorePulse-2.2.0-windows10-11-x64-Setup.exe` no usuário que utiliza o Pulse. É o mesmo v16 validado pelo responsável. O arquivo ainda não tem assinatura Authenticode. Se o Windows bloquear por política corporativa, solicite revisão ao administrador; não desative proteções do sistema.
+Abra `VCorePulse-2.2.0-windows10-11-x64-Setup.exe` no usuário que utiliza o Pulse. Esta entrega é o build 19, com atualização legada verificada automaticamente. O arquivo ainda não tem assinatura Authenticode. Se o Windows bloquear por política corporativa, solicite revisão ao administrador; não desative proteções do sistema.
 
 ```powershell
 Get-FileHash .\VCorePulse-2.2.0-windows10-11-x64-Setup.exe -Algorithm SHA256
@@ -62,3 +62,7 @@ Depois de iniciar, abra `http://127.0.0.1:4173`. O painel fica local; não expon
 O teste automatizado de instalação, painel, PDF, reinício e adulteração usa chaves descartáveis externas. **Não comprova** interação com Keychain/Secret Service, ciclo completo do serviço, sensores de todo hardware ou rollback de banco entre versões.
 
 [Matriz](platforms-2.2.md) · [Manual visual](https://www.voigtcore.com.br/manual/pulse/pt-BR/) · suporte@voigtcore.com.br
+
+## Uma tentativa de compra ficou pendente?
+
+Abra a tela de licença: o Pulse consulta a tentativa existente sem criar outra cobrança. Se houver um checkout de cartão ainda não pago, use **Encerrar tentativa sem pagar**. O banco precisa confirmar o encerramento antes de liberar uma nova compra. Não apague o armazenamento do navegador para contornar a verificação. Uma licença ativa é independente da confirmação da nova compra.

@@ -7,7 +7,7 @@
 
 ## Windows
 
-Open `VCorePulse-2.2.0-windows10-11-x64-Setup.exe` as the Pulse user. It is the owner-accepted v16 binary. Authenticode signing is not available. If blocked by policy, ask the administrator for review; do not disable OS protections.
+Open `VCorePulse-2.2.0-windows10-11-x64-Setup.exe` as the Pulse user. This is build 19, with an automatically verified legacy upgrade. Authenticode signing is not available. If blocked by policy, ask the administrator for review; do not disable OS protections.
 
 ## Linux and macOS
 
@@ -54,3 +54,7 @@ Do not enter card details or create payments just to test an installer. The owne
 Automated installer/dashboard/PDF/restart/tamper tests use disposable external keys. They **do not establish** Keychain/Secret Service interaction, full service lifecycle, all hardware sensors or database rollback across versions.
 
 [Platform matrix](platforms-2.2.md) · [Visual guide](https://www.voigtcore.com.br/manual/pulse/en/) · suporte@voigtcore.com.br
+
+## A purchase attempt is pending?
+
+Open the license screen: Pulse retrieves the existing attempt without creating another charge. For an unpaid card checkout, select **Close unpaid attempt**. The bank must confirm closure before another purchase is enabled. Do not clear browser storage to bypass verification. An active license is independent of confirmation of a new purchase.

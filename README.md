@@ -24,17 +24,19 @@ Capítulos, busca e capturas ampliáveis em uma experiência própria do Pulse. 
 | 🇨🇳 简体中文 | [打开手册](https://www.voigtcore.com.br/manual/pulse/zh-Hans/) |
 | 🇹🇼 繁體中文 | [開啟手冊](https://www.voigtcore.com.br/manual/pulse/zh-Hant/) |
 
-**[Instaladores e guias / Installers and guides](https://www.voigtcore.com.br/downloads/2.2.0/)** · [GitHub Release](https://github.com/VoigtCore/VCore-PULSE/releases/tag/v2.2.0-rc.16)
+**[Instaladores e guias / Installers and guides](https://www.voigtcore.com.br/downloads/2.2.0/)** · [GitHub Release](https://github.com/VoigtCore/VCore-PULSE/releases/tag/v2.2.0)
 
 ## Estado da versão / Release status
 
-Windows x64: **v16 congelado**, aprovado pelo responsável em dois PCs. Pix e compra real com cartão internacional confirmados pelo responsável. O binário Windows conserva seu SHA-256.
+**Build 19 — 29/09/2026.** Windows 10/11 x64, Linux x64/ARM64 e macOS Intel/Apple Silicon disponíveis. Windows: atualização de instalação legada testada com identidade, licença, histórico e SQLCipher preservados. Os quatro pacotes Unix passaram pelos testes em runners nativos. A aceitação manual do novo build em Windows 11, cofres e serviços Unix permanece pendente.
 
-Linux x64, **Linux ARM64**, macOS Intel e Apple Silicon: pacotes de validação `v16-port.3`, com SQLCipher nativo e fontes para relatórios nos cinco idiomas. Motores, regras de licença e compras preservados. Consulte a [matriz de testes e requisitos](docs/platforms-2.2.md).
+**Build 19 — September 29, 2026.** Five platform packages available. Windows legacy upgrade passed, preserving identity, license, history and SQLCipher. All four Unix packages passed native-runner tests. Manual acceptance of this build on Windows 11 and Unix OS vaults/services remains pending.
 
-Windows x64: **frozen v16**, owner-accepted on two PCs, including Pix and a real international card purchase. Linux x64/ARM64 and macOS Intel/Apple Silicon: `v16-port.3` validation packages with native SQLCipher and fonts for five report languages. See the [test and requirements matrix](docs/platforms-2.2.md).
+A tentativa de compra é recuperada ao reabrir a tela. Um checkout ainda não pago pode ser encerrado após verificação do banco. Licença ativa não é apresentada como confirmação de uma nova compra. Pix, cartão, preços, motores e regras de licença foram preservados.
 
-**Assinatura de distribuição e notarização Apple pendentes. / Distribution signing and Apple notarization pending.** A release fica marcada como pré-lançamento; isso não habilita atualização automática. / The release is marked as a prerelease and does not enable automatic updates.
+Purchase attempts resume when reopening the screen. An unpaid checkout can be closed after bank verification. An active license is not treated as confirmation of a new purchase. Pix, card processing, pricing, engines and licensing rules are preserved.
+
+**Sem assinatura Authenticode ou notarização Apple.** Distribuição identificada como pré-lançamento técnico; instalação manual, sem ativar atualizações automáticas. / **No Authenticode signature or Apple notarization.** Technical prerelease, manual installation; automatic updates are not enabled.
 
 [Instalação em português](docs/installation-2.2.pt-BR.md) · [English installation guide](docs/installation-2.2.en.md)
 
