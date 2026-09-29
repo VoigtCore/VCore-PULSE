@@ -17,7 +17,7 @@ async function stop(){const r=await request('/api/pulse/shutdown',{method:'POST'
 try{
  const installed=exec('sh',[path.resolve('installer.sh'),'--no-start']);assert.match(installed,/Installed VCore Pulse 2.2/);proof.steps.push('INSTALL_PASS');
  const health=await start();assert.equal(health.status,'ok');proof.steps.push('HEALTH_PASS');
- const about=await (await request('/api/pulse/support/about')).json();assert.equal(about.build,'2026.09.29-release-candidate.19');proof.build=about.build;
+ const about=await (await request('/api/pulse/support/about')).json();assert.equal(about.build,'2026.09.29-release-candidate.20');proof.build=about.build;
  assert.equal(about.database.engine,'SQLCipher');
  const malicious=await request('/api/pulse/license/customer',{method:'POST',headers:{Origin:'https://untrusted.invalid','Content-Type':'application/json'},body:'{}'});assert.equal(malicious.status,403);proof.steps.push('CROSS_ORIGIN_DENIED');
  proof.pdf={};
@@ -31,6 +31,11 @@ try{
  const dbHash=crypto.createHash('sha256').update(fs.readFileSync(path.join(data,'pulse.db'))).digest('hex');
  exec('sh',[path.resolve('installer.sh'),'--no-start']);assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(data,'pulse.db'))).digest('hex'),dbHash);proof.steps.push('REINSTALL_PRESERVES_DATABASE');
  await start();const after=await(await request('/api/pulse/support/update/readiness')).json();assert.equal(after.machineId,prior.machineId);assert.equal(after.integrity,'OK');assert.ok(after.telemetryRows>=prior.telemetryRows);await stop();proof.steps.push('RESTART_IDENTITY_HISTORY_PASS');
+ const nativeNode=path.join(app,'runtime/bin/node');
+ const lifecycle=spawnSync(nativeNode,[path.resolve('tools/native-crypto/lifecycle-package-proof.mjs'),app,path.join(out,'lifecycle.json')],{env:{...env,PULSE_DATA_DIR:data,PULSE_DATABASE_ENCRYPTION:'sqlcipher',VCORE_LIFECYCLE_DISPOSABLE_PROOF:'1'},encoding:'utf8',timeout:300000});
+ if(lifecycle.status!==0)throw Error('Lifecycle: '+lifecycle.stdout.slice(-2000)+' '+lifecycle.stderr.slice(-2000));
+ proof.lifecycle=JSON.parse(fs.readFileSync(path.join(out,'lifecycle.json'),'utf8'));assert.equal(proof.lifecycle.status,'PASS');proof.steps.push('ENCRYPTED_ROTATION_COMPRESSION_PASS');
+ await start();const postRotation=await(await request('/api/pulse/support/update/readiness')).json();assert.equal(postRotation.machineId,prior.machineId);assert.equal(postRotation.integrity,'OK');await stop();proof.steps.push('POST_ROTATION_RESTART_PASS');
  const manifest=path.join(app,'pulse/vendor/sqlcipher',process.platform+'-'+process.arch,'RUNTIME-MANIFEST.json');fs.appendFileSync(manifest,' ');
  const node=path.join(app,'runtime/bin/node');const tamper=spawnSync(node,['--input-type=module','-e',`const m=await import(${JSON.stringify('file://'+path.join(app,'pulse/sqlite-runtime.js'))});console.log(m.probeSqlCipherRuntime().errorCode);`],{env,encoding:'utf8'});assert.match(tamper.stdout,/SQLCIPHER_ARTIFACT_INTEGRITY_FAILED/);proof.steps.push('MANIFEST_TAMPER_DENIED');
  proof.status='PASS';
