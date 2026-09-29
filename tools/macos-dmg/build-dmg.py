@@ -61,7 +61,7 @@ try:
  subprocess.run(['codesign','--verify','--deep','--strict',str(mount/'VCore Pulse.app')],check=True)
  assert 'arm64' in subprocess.check_output(['lipo','-archs',str(mount/'VCore Pulse.app/Contents/MacOS/PulseLauncher')],text=True)
  # Exercise the mounted bundle's actual installer. Native runtime acceptance follows separately.
- testhome=Path('/tmp/pulse-dmg-install-proof');testhome.mkdir(exist_ok=True)
+ testhome=Path('/tmp/pulse-dmg-install-proof').resolve();testhome.mkdir(exist_ok=True)
  env=dict(os.environ,VCORE_INSTALL_ROOT=str(testhome/'app'),VCORE_DATA_ROOT=str(testhome/'data'))
  subprocess.run(['sh',str(payload),'--no-start'],env=env,check=True)
  assert json.loads((testhome/'app/package.json').read_text())['build']=='2026.09.29-release-candidate.20'
