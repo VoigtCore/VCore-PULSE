@@ -51,7 +51,7 @@ Support: suporte@voigtcore.com.br
 '''
 (stage/'LEIA-ME — READ ME.txt').write_text(guide,encoding='utf-8')
 dmg=out/'VCorePulse-2.2.0-macOS-Apple-Silicon-build20.dmg'
-subprocess.run(['hdiutil','create','-volname','VCore Pulse 2.2 Apple Silicon','-srcfolder',str(stage),'-ov','-format','UDZO',str(dmg)],check=True)
+subprocess.run(['hdiutil','create','-size','256m','-fs','HFS+','-volname','VCore Pulse 2.2 Apple Silicon','-srcfolder',str(stage),'-ov','-format','UDZO',str(dmg)],check=True)
 subprocess.run(['hdiutil','verify',str(dmg)],check=True)
 mount=Path('/tmp/vcore-dmg-verify');mount.mkdir(exist_ok=True)
 subprocess.run(['hdiutil','attach','-nobrowse','-readonly','-mountpoint',str(mount),str(dmg)],check=True)
