@@ -7,7 +7,7 @@
 
 ## Windows
 
-Open `VCorePulse-2.2.0-windows10-11-x64-Setup.exe` as the Pulse user. This is build 19, with an automatically verified legacy upgrade. Authenticode signing is not available. If blocked by policy, ask the administrator for review; do not disable OS protections.
+Open `VCorePulse-2.2.0-windows10-11-x64-Setup.exe` as the Pulse user. This is build 20, with an automatically verified legacy upgrade. Authenticode signing is not available. If blocked by policy, ask the administrator for review; do not disable OS protections.
 
 ## Linux and macOS
 
@@ -58,3 +58,7 @@ Automated installer/dashboard/PDF/restart/tamper tests use disposable external k
 ## A purchase attempt is pending?
 
 Open the license screen: Pulse retrieves the existing attempt without creating another charge. For an unpaid card checkout, select **Close unpaid attempt**. The bank must confirm closure before another purchase is enabled. Do not clear browser storage to bypass verification. An active license is independent of confirmation of a new purchase.
+
+## História em camadas / Layered history
+
+Build 20 includes rotation and large-query fixes. Update without uninstalling, as the same user. SAFE keeps originals and does not reclaim disk space automatically. Encrypted databases may not shrink when compressed. See the platform matrix for validation and limits.

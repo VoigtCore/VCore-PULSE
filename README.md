@@ -24,19 +24,17 @@ Capítulos, busca e capturas ampliáveis em uma experiência própria do Pulse. 
 | 🇨🇳 简体中文 | [打开手册](https://www.voigtcore.com.br/manual/pulse/zh-Hans/) |
 | 🇹🇼 繁體中文 | [開啟手冊](https://www.voigtcore.com.br/manual/pulse/zh-Hant/) |
 
-**[Instaladores e guias / Installers and guides](https://www.voigtcore.com.br/downloads/2.2.0/)** · [GitHub Release](https://github.com/VoigtCore/VCore-PULSE/releases/tag/v2.2.0)
+**[Instaladores e guias / Installers and guides](https://www.voigtcore.com.br/downloads/2.2.0/)** · [GitHub Release](https://github.com/VoigtCore/VCore-PULSE/releases/tag/v2.2.0-build.20)
 
 ## Estado da versão / Release status
 
-**Build 19 — 29/09/2026.** Windows 10/11 x64, Linux x64/ARM64 e macOS Intel/Apple Silicon disponíveis. Windows: atualização de instalação legada testada com identidade, licença, histórico e SQLCipher preservados. Os quatro pacotes Unix passaram pelos testes em runners nativos. A aceitação manual do novo build em Windows 11, cofres e serviços Unix permanece pendente.
+**Build 20 — 29/09/2026.** Windows 10/11 x64, Linux x64/ARM64 e macOS Intel/Apple Silicon. Rodízio com SQLCipher, compressão SAFE, preservação do histórico e reinício testados nos cinco pacotes. Corrigidas consultas grandes e contador de rodízios. Compras, licenciamento e motores preservados.
 
-**Build 19 — September 29, 2026.** Five platform packages available. Windows legacy upgrade passed, preserving identity, license, history and SQLCipher. All four Unix packages passed native-runner tests. Manual acceptance of this build on Windows 11 and Unix OS vaults/services remains pending.
+**Build 20 — September 29, 2026.** All five packages passed encrypted history rotation, SAFE compression, continuity and restart checks. Fixes large queries and rotation counters. Purchase, licensing and engine code is unchanged.
 
-A tentativa de compra é recuperada ao reabrir a tela. Um checkout ainda não pago pode ser encerrado após verificação do banco. Licença ativa não é apresentada como confirmação de uma nova compra. Pix, cartão, preços, motores e regras de licença foram preservados.
+SAFE mantém originais e não libera espaço automaticamente; arquivos cifrados podem não diminuir. / SAFE retains originals and does not reclaim disk space automatically; encrypted files may not shrink.
 
-Purchase attempts resume when reopening the screen. An unpaid checkout can be closed after bank verification. An active license is not treated as confirmation of a new purchase. Pix, card processing, pricing, engines and licensing rules are preserved.
-
-**Sem assinatura Authenticode ou notarização Apple.** Distribuição identificada como pré-lançamento técnico; instalação manual, sem ativar atualizações automáticas. / **No Authenticode signature or Apple notarization.** Technical prerelease, manual installation; automatic updates are not enabled.
+Distribuição sem Authenticode/notarização, instalação manual. Retestes em hardware Windows 11, cofres/serviços Unix e carga prolongada pendentes. / Unsigned, not notarized, manual installation. Windows 11 hardware, Unix vault/service and sustained-load acceptance pending.
 
 [Instalação em português](docs/installation-2.2.pt-BR.md) · [English installation guide](docs/installation-2.2.en.md)
 

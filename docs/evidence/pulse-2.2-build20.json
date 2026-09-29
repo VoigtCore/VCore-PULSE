@@ -1,0 +1,287 @@
+{
+  "build": "2026.09.29-release-candidate.20",
+  "nativeCI": {
+    "status": "PASS",
+    "run": "https://github.com/VoigtCore/VCore-PULSE/actions/runs/36584316085",
+    "head": "c01502a0a9dbfbdeeb1e457fb435b0c6c6d2ca5f",
+    "proofs": [
+      {
+        "platform": "linux",
+        "architecture": "x64",
+        "status": "PASS",
+        "commerceEndpoint": "loopback port 9 (disabled)",
+        "keyStorage": "disposable external keys; OS vault not covered by this test",
+        "steps": [
+          "INSTALL_PASS",
+          "HEALTH_PASS",
+          "CROSS_ORIGIN_DENIED",
+          "PDF_FIVE_LANGUAGES_PASS",
+          "SHUTDOWN_PASS",
+          "ENCRYPTED_DATABASE_PASS",
+          "REINSTALL_PRESERVES_DATABASE",
+          "RESTART_IDENTITY_HISTORY_PASS",
+          "ENCRYPTED_ROTATION_COMPRESSION_PASS",
+          "POST_ROTATION_RESTART_PASS",
+          "MANIFEST_TAMPER_DENIED"
+        ],
+        "build": "2026.09.29-release-candidate.20",
+        "pdf": {
+          "pt-BR": 160183,
+          "en": 159057,
+          "es": 159219,
+          "zh-CN": 336311,
+          "zh-TW": 361343
+        },
+        "lifecycle": {
+          "platform": "linux",
+          "arch": "x64",
+          "status": "PASS",
+          "disposable": true,
+          "encryptedRotation": true,
+          "rotationCount": 1,
+          "identityPreserved": true,
+          "licensePreserved": true,
+          "historicalRows": 3,
+          "largeQueryRows": 420000,
+          "compression": {
+            "state": "AVAILABLE",
+            "originalRetained": true,
+            "originalBytes": 802816,
+            "compressedBytes": 802847
+          }
+        }
+      },
+      {
+        "platform": "darwin",
+        "architecture": "x64",
+        "status": "PASS",
+        "commerceEndpoint": "loopback port 9 (disabled)",
+        "keyStorage": "disposable external keys; OS vault not covered by this test",
+        "steps": [
+          "INSTALL_PASS",
+          "HEALTH_PASS",
+          "CROSS_ORIGIN_DENIED",
+          "PDF_FIVE_LANGUAGES_PASS",
+          "SHUTDOWN_PASS",
+          "ENCRYPTED_DATABASE_PASS",
+          "REINSTALL_PRESERVES_DATABASE",
+          "RESTART_IDENTITY_HISTORY_PASS",
+          "ENCRYPTED_ROTATION_COMPRESSION_PASS",
+          "POST_ROTATION_RESTART_PASS",
+          "MANIFEST_TAMPER_DENIED"
+        ],
+        "build": "2026.09.29-release-candidate.20",
+        "pdf": {
+          "pt-BR": 161848,
+          "en": 160533,
+          "es": 160972,
+          "zh-CN": 343345,
+          "zh-TW": 367833
+        },
+        "lifecycle": {
+          "platform": "darwin",
+          "arch": "x64",
+          "status": "PASS",
+          "disposable": true,
+          "encryptedRotation": true,
+          "rotationCount": 1,
+          "identityPreserved": true,
+          "licensePreserved": true,
+          "historicalRows": 3,
+          "largeQueryRows": 420000,
+          "compression": {
+            "state": "AVAILABLE",
+            "originalRetained": true,
+            "originalBytes": 1114112,
+            "compressedBytes": 1114149
+          }
+        }
+      },
+      {
+        "platform": "darwin",
+        "architecture": "arm64",
+        "status": "PASS",
+        "commerceEndpoint": "loopback port 9 (disabled)",
+        "keyStorage": "disposable external keys; OS vault not covered by this test",
+        "steps": [
+          "INSTALL_PASS",
+          "HEALTH_PASS",
+          "CROSS_ORIGIN_DENIED",
+          "PDF_FIVE_LANGUAGES_PASS",
+          "SHUTDOWN_PASS",
+          "ENCRYPTED_DATABASE_PASS",
+          "REINSTALL_PRESERVES_DATABASE",
+          "RESTART_IDENTITY_HISTORY_PASS",
+          "ENCRYPTED_ROTATION_COMPRESSION_PASS",
+          "POST_ROTATION_RESTART_PASS",
+          "MANIFEST_TAMPER_DENIED"
+        ],
+        "build": "2026.09.29-release-candidate.20",
+        "pdf": {
+          "pt-BR": 161733,
+          "en": 160360,
+          "es": 160857,
+          "zh-CN": 343390,
+          "zh-TW": 367974
+        },
+        "lifecycle": {
+          "platform": "darwin",
+          "arch": "arm64",
+          "status": "PASS",
+          "disposable": true,
+          "encryptedRotation": true,
+          "rotationCount": 1,
+          "identityPreserved": true,
+          "licensePreserved": true,
+          "historicalRows": 3,
+          "largeQueryRows": 420000,
+          "compression": {
+            "state": "AVAILABLE",
+            "originalRetained": true,
+            "originalBytes": 1052672,
+            "compressedBytes": 1052709
+          }
+        }
+      },
+      {
+        "platform": "linux",
+        "architecture": "arm64",
+        "status": "PASS",
+        "commerceEndpoint": "loopback port 9 (disabled)",
+        "keyStorage": "disposable external keys; OS vault not covered by this test",
+        "steps": [
+          "INSTALL_PASS",
+          "HEALTH_PASS",
+          "CROSS_ORIGIN_DENIED",
+          "PDF_FIVE_LANGUAGES_PASS",
+          "SHUTDOWN_PASS",
+          "ENCRYPTED_DATABASE_PASS",
+          "REINSTALL_PRESERVES_DATABASE",
+          "RESTART_IDENTITY_HISTORY_PASS",
+          "ENCRYPTED_ROTATION_COMPRESSION_PASS",
+          "POST_ROTATION_RESTART_PASS",
+          "MANIFEST_TAMPER_DENIED"
+        ],
+        "build": "2026.09.29-release-candidate.20",
+        "pdf": {
+          "pt-BR": 160283,
+          "en": 158987,
+          "es": 159220,
+          "zh-CN": 335808,
+          "zh-TW": 360328
+        },
+        "lifecycle": {
+          "platform": "linux",
+          "arch": "arm64",
+          "status": "PASS",
+          "disposable": true,
+          "encryptedRotation": true,
+          "rotationCount": 1,
+          "identityPreserved": true,
+          "licensePreserved": true,
+          "historicalRows": 3,
+          "largeQueryRows": 420000,
+          "compression": {
+            "state": "AVAILABLE",
+            "originalRetained": true,
+            "originalBytes": 819200,
+            "compressedBytes": 819231
+          }
+        }
+      }
+    ]
+  },
+  "windowsInstall": {
+    "status": "PASS",
+    "v12ErrorReproduced": true,
+    "v13InstallExit": 0,
+    "installerPreservedDatabaseBytes": true,
+    "legacyBuild": "2026.08.29-2.2.0",
+    "newBuild": "2026.09.29-release-candidate.20",
+    "runtimeHealthy": true,
+    "normalShutdown": true,
+    "preservation": {
+      "identityPreserved": true,
+      "historyPreserved": true,
+      "licensePreserved": true,
+      "schema": 10,
+      "integrity": "ok",
+      "encrypted": true
+    },
+    "realNotebook": "PENDING_USER_RETEST"
+  },
+  "windowsLifecycle": {
+    "platform": "win32",
+    "arch": "x64",
+    "status": "PASS",
+    "disposable": true,
+    "encryptedRotation": true,
+    "rotationCount": 2,
+    "identityPreserved": true,
+    "licensePreserved": true,
+    "historicalRows": 4,
+    "largeQueryRows": 630000,
+    "compression": {
+      "state": "AVAILABLE",
+      "originalRetained": true,
+      "originalBytes": 720896,
+      "compressedBytes": 720924
+    }
+  },
+  "windowsRestart": {
+    "status": "PASS",
+    "health": "ok",
+    "licenseValid": true,
+    "rotationEnabled": true,
+    "compressionEnabled": true,
+    "exitCode": null
+  },
+  "focusedTests": 67,
+  "payloadDiff": {
+    "status": "PASS",
+    "changes": [
+      "package.json",
+      "pulse/database-lifecycle/lifecycle-service.js",
+      "pulse/database-lifecycle/temporal-query-router.js",
+      "pulse/update/installed-release.json"
+    ],
+    "commerceLicenseEnginesUnchanged": true
+  },
+  "scan": [
+    {
+      "platform": "win32-x64",
+      "filesChecked": 1505,
+      "databaseOrSecretFiles": 0,
+      "privateKeyBlocks": 0,
+      "status": "PASS"
+    },
+    {
+      "platform": "linux-x64",
+      "filesChecked": 1504,
+      "databaseOrSecretFiles": 0,
+      "privateKeyBlocks": 0,
+      "status": "PASS"
+    },
+    {
+      "platform": "linux-arm64",
+      "filesChecked": 1504,
+      "databaseOrSecretFiles": 0,
+      "privateKeyBlocks": 0,
+      "status": "PASS"
+    },
+    {
+      "platform": "darwin-x64",
+      "filesChecked": 1504,
+      "databaseOrSecretFiles": 0,
+      "privateKeyBlocks": 0,
+      "status": "PASS"
+    },
+    {
+      "platform": "darwin-arm64",
+      "filesChecked": 1504,
+      "databaseOrSecretFiles": 0,
+      "privateKeyBlocks": 0,
+      "status": "PASS"
+    }
+  ]
+}

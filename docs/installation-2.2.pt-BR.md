@@ -7,7 +7,7 @@
 
 ## Windows 10/11 x64
 
-Abra `VCorePulse-2.2.0-windows10-11-x64-Setup.exe` no usuário que utiliza o Pulse. Esta entrega é o build 19, com atualização legada verificada automaticamente. O arquivo ainda não tem assinatura Authenticode. Se o Windows bloquear por política corporativa, solicite revisão ao administrador; não desative proteções do sistema.
+Abra `VCorePulse-2.2.0-windows10-11-x64-Setup.exe` no usuário que utiliza o Pulse. Esta entrega é o build 20, com atualização legada verificada automaticamente. O arquivo ainda não tem assinatura Authenticode. Se o Windows bloquear por política corporativa, solicite revisão ao administrador; não desative proteções do sistema.
 
 ```powershell
 Get-FileHash .\VCorePulse-2.2.0-windows10-11-x64-Setup.exe -Algorithm SHA256
@@ -66,3 +66,7 @@ O teste automatizado de instalação, painel, PDF, reinício e adulteração usa
 ## Uma tentativa de compra ficou pendente?
 
 Abra a tela de licença: o Pulse consulta a tentativa existente sem criar outra cobrança. Se houver um checkout de cartão ainda não pago, use **Encerrar tentativa sem pagar**. O banco precisa confirmar o encerramento antes de liberar uma nova compra. Não apague o armazenamento do navegador para contornar a verificação. Uma licença ativa é independente da confirmação da nova compra.
+
+## História em camadas / Layered history
+
+O build 20 inclui as correções do rodízio e de consultas grandes. Atualize sem desinstalar, no mesmo usuário. SAFE mantém os originais; não libera espaço automaticamente. Bancos cifrados podem não diminuir com compressão. Consulte a matriz para resultados e limites.
