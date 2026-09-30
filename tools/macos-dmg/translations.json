@@ -1,0 +1,52 @@
+{
+  "pt-BR": {
+    "subtitle": "Memória operacional",
+    "body": "Instale ou abra o Pulse no seu usuário. Seu histórico e sua licença serão preservados. O painel abre no navegador quando o serviço estiver pronto.\n\nO Pulse inicia ao entrar na sua conta do Mac. Autorize o Acesso às Chaves se solicitado. Não é necessário usar o Terminal.",
+    "warning": "Sem assinatura Developer ID ou notarização Apple. Consulte o guia incluído.",
+    "install": "Instalar e abrir Pulse",
+    "working": "Verificando, instalando e iniciando… Aguarde.",
+    "success": "Pulse iniciado. O painel está aberto no navegador. Ejete o disco e reabra o Pulse em ~/Applications (Aplicativos do usuário).",
+    "failure": "Não foi possível concluir (código {code}). Consulte Library/Logs/VCore Pulse/installer.log e o guia. Preserve seus dados.",
+    "open": "Abrir Pulse"
+  },
+  "en": {
+    "subtitle": "Operational memory",
+    "body": "Install or open Pulse for your user. Your history and license are preserved. The dashboard opens in your browser when the service is ready.\n\nPulse starts when you log into your Mac account. Approve Keychain access if requested. No Terminal commands are needed.",
+    "warning": "No Developer ID signature or Apple notarization. See the included guide.",
+    "install": "Install and open Pulse",
+    "working": "Verifying, installing and starting… Please wait.",
+    "success": "Pulse started. The dashboard is open in your browser. Eject the disk and reopen Pulse from ~/Applications.",
+    "failure": "Could not complete (code {code}). See Library/Logs/VCore Pulse/installer.log and the guide. Preserve your data.",
+    "open": "Open Pulse"
+  },
+  "es": {
+    "subtitle": "Memoria operativa",
+    "body": "Instala o abre Pulse para tu usuario. Se conservan tu historial y tu licencia. El panel se abre en el navegador cuando el servicio esté listo.\n\nPulse inicia al entrar en tu cuenta del Mac. Autoriza el acceso al Llavero si se solicita. No necesitas usar el Terminal.",
+    "warning": "Sin firma Developer ID ni notarización de Apple. Consulta la guía incluida.",
+    "install": "Instalar y abrir Pulse",
+    "working": "Verificando, instalando e iniciando… Espera.",
+    "success": "Pulse iniciado. El panel está abierto en el navegador. Expulsa el disco y vuelve a abrir Pulse desde ~/Applications.",
+    "failure": "No se pudo completar (código {code}). Consulta Library/Logs/VCore Pulse/installer.log y la guía. Conserva tus datos.",
+    "open": "Abrir Pulse"
+  },
+  "zh-Hans": {
+    "subtitle": "运行记忆",
+    "body": "为当前用户安装或打开 Pulse。历史记录和许可证将保留。服务准备就绪后，面板会在浏览器中打开。\n\n登录 Mac 账户时 Pulse 会自动启动。如系统提示，请允许访问钥匙串。无需使用终端。",
+    "warning": "未使用 Developer ID 签名，也未通过 Apple 公证。请阅读随附指南。",
+    "install": "安装并打开 Pulse",
+    "working": "正在验证、安装和启动… 请稍候。",
+    "success": "Pulse 已启动，面板已在浏览器中打开。推出磁盘后，可从 ~/Applications 再次打开 Pulse。",
+    "failure": "未能完成（代码 {code}）。请查看 Library/Logs/VCore Pulse/installer.log 和指南。请保留数据。",
+    "open": "打开 Pulse"
+  },
+  "zh-Hant": {
+    "subtitle": "運行記憶",
+    "body": "為目前使用者安裝或開啟 Pulse。歷史紀錄和授權將保留。服務準備就緒後，面板會在瀏覽器中開啟。\n\n登入 Mac 帳戶時 Pulse 會自動啟動。如系統提示，請允許存取鑰匙圈。無需使用終端機。",
+    "warning": "未使用 Developer ID 簽署，也未通過 Apple 公證。請閱讀隨附指南。",
+    "install": "安裝並開啟 Pulse",
+    "working": "正在驗證、安裝和啟動… 請稍候。",
+    "success": "Pulse 已啟動，面板已在瀏覽器中開啟。退出磁碟後，可從 ~/Applications 再次開啟 Pulse。",
+    "failure": "未能完成（代碼 {code}）。請查看 Library/Logs/VCore Pulse/installer.log 和指南。請保留資料。",
+    "open": "開啟 Pulse"
+  }
+}
