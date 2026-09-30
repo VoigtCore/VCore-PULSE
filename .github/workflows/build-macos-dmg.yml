@@ -1,12 +1,20 @@
-name: Build Apple Silicon DMG
+name: Build Mac DMG
 on:
   workflow_dispatch:
+    inputs:
+      targets:
+        required: true
+        type: string
 permissions:
   contents: read
 jobs:
   dmg:
-    runs-on: macos-14
-    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        include: ${{ fromJSON(inputs.targets) }}
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
@@ -14,18 +22,26 @@ jobs:
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: 24.21.0
-      - name: Fetch verified existing Apple Silicon payload
+      - name: Fetch verified payload
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ASSET: ${{ matrix.asset }}
+          SHA256: ${{ matrix.sha256 }}
         run: |
-          curl --fail --location --output installer.sh https://github.com/VoigtCore/VCore-PULSE/releases/download/v2.2.0-build.20/VCorePulse-2.2.0-macos-arm64.sh
-          echo 'aba468e050de71489fb56c50ec088caa5e3896d949487fde3e97918bcfb86c13  installer.sh' | shasum -a 256 -c -
+          curl --fail --location --header "Authorization: Bearer $GH_TOKEN" --header 'Accept: application/octet-stream' --output installer.sh "https://api.github.com/repos/VoigtCore/VCore-PULSE/releases/assets/$ASSET"
+          echo "$SHA256  installer.sh" | shasum -a 256 -c -
       - name: Build and mount-test DMG
+        env:
+          VCORE_DMG_TARGET: ${{ matrix.target }}
+          VCORE_DMG_BUILD: 2026.09.30-release-candidate.21
+          VCORE_DMG_PAYLOAD_SHA256: ${{ matrix.sha256 }}
         run: python3 tools/macos-dmg/build-dmg.py
       - name: Verify native Pulse runtime and lifecycle
         run: node tools/native-crypto/smoke-package.mjs
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:
-          name: pulse-apple-silicon-dmg
+          name: pulse-dmg-${{ matrix.target }}
           path: |
             dmg-output/
             validation-output/
