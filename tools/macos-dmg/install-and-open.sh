@@ -8,7 +8,7 @@ LAUNCHER="$HOME/Applications/VCore Pulse.app"
 LABEL="gui/$(id -u)/com.voigtcore.pulse"
 EXPECTED="$(cat "$RESOURCES/payload.sha256")"
 ACTUAL="$(/usr/bin/shasum -a 256 "$RESOURCES/installer.sh" | /usr/bin/awk '{print $1}')"
-[[ "$(uname -m)" == arm64 ]] || { echo 'APPLE_SILICON_REQUIRED'; exit 2; }
+[[ "$(uname -m)" == "$(cat "$RESOURCES/architecture")" ]] || { echo 'MAC_ARCHITECTURE_MISMATCH'; exit 2; }
 [[ "$EXPECTED" == "$ACTUAL" ]] || { echo 'INSTALLER_INTEGRITY_FAILED'; exit 3; }
 [[ ! -L "$APP" && ! -L "$DATA" && ! -L "$HOME/Applications" && ! -L "$LAUNCHER" ]] || { echo 'SYMLINK_DESTINATION_REFUSED'; exit 4; }
 if [[ -e "$LAUNCHER" ]]; then
