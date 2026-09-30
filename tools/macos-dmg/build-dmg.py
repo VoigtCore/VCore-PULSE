@@ -4,7 +4,7 @@ target=os.environ.get('VCORE_DMG_TARGET','darwin-arm64')
 arch=target.split('-')[-1]
 native='x64' if os.uname().machine=='x86_64' else os.uname().machine
 assert arch==native and arch in ['arm64','x64']
-build=os.environ.get('VCORE_DMG_BUILD','2026.09.30-release-candidate.21')
+build=os.environ.get('VCORE_DMG_BUILD','2026.09.30-release-candidate.22')
 expected=os.environ['VCORE_DMG_PAYLOAD_SHA256']
 label='Apple-Silicon' if arch=='arm64' else 'Intel'
 here=Path(__file__).resolve().parent
@@ -18,7 +18,7 @@ shutil.copy2(installer,resources/'installer.sh');shutil.copy2(here/'install-and-
 shutil.copy2(here/'translations.json',resources/'translations.json')
 (resources/'payload.sha256').write_text(digest+'\n')
 (resources/'architecture').write_text('arm64\n' if arch=='arm64' else 'x86_64\n')
-plist={'CFBundleIdentifier':'com.voigtcore.pulse.launcher','CFBundleName':'VCore Pulse','CFBundleDisplayName':'VCore Pulse','CFBundleExecutable':'PulseLauncher','CFBundleIconFile':'AppIcon','CFBundlePackageType':'APPL','CFBundleShortVersionString':'2.2.0','CFBundleVersion':'21.1','LSMinimumSystemVersion':'13.0','NSHighResolutionCapable':True}
+plist={'CFBundleIdentifier':'com.voigtcore.pulse.launcher','CFBundleName':'VCore Pulse','CFBundleDisplayName':'VCore Pulse','CFBundleExecutable':'PulseLauncher','CFBundleIconFile':'AppIcon','CFBundlePackageType':'APPL','CFBundleShortVersionString':'2.2.0','CFBundleVersion':'22.1','LSMinimumSystemVersion':'13.0','NSHighResolutionCapable':True}
 (contents/'Info.plist').write_bytes(plistlib.dumps(plist))
 icons=Path('Pulse.iconset');icons.mkdir()
 for n in [16,32,128,256,512]:
@@ -57,12 +57,12 @@ Update without uninstalling. Back up through Pulse and retain keys/data. SAFE re
 
 Support: suporte@voigtcore.com.br
 '''
-guide=guide.replace('Apple Silicon · build 20',label+' · build 21')
+guide=guide.replace('Apple Silicon · build 20',label+' · build 22')
 translations=json.loads((here/'translations.json').read_text())
 for language in ['es','zh-Hans','zh-Hant']:
  guide+='\n'+language+'\n'+translations[language]['body']+'\n'+translations[language]['warning']+'\n'
 (stage/'LEIA-ME — READ ME.txt').write_text(guide,encoding='utf-8')
-dmg=out/f'VCorePulse-2.2.0-macOS-{label}-build21.dmg'
+dmg=out/f'VCorePulse-2.2.0-macOS-{label}-build22.dmg'
 subprocess.run(['hdiutil','create','-size','256m','-fs','HFS+','-volname','VCore Pulse 2.2 '+label,'-srcfolder',str(stage),'-ov','-format','UDZO',str(dmg)],check=True)
 subprocess.run(['hdiutil','verify',str(dmg)],check=True)
 mount=Path('/tmp/vcore-dmg-verify');mount.mkdir(exist_ok=True)
@@ -79,7 +79,7 @@ try:
  assert json.loads((testhome/'app/package.json').read_text())['build']==build
 except:raise
 finally:subprocess.run(['hdiutil','detach',str(mount)],check=True)
-record={'file':dmg.name,'bytes':dmg.stat().st_size,'sha256':hashlib.sha256(dmg.read_bytes()).hexdigest(),'payloadSha256':digest,'architecture':arch,'build':build,'wrapperVersion':'21.1','dmgVerified':True,'mountedInstallerTest':'PASS','developerIDSigned':False,'notarized':False,'guiKeychainLoginAcceptance':'PENDING_USER_MAC'}
+record={'file':dmg.name,'bytes':dmg.stat().st_size,'sha256':hashlib.sha256(dmg.read_bytes()).hexdigest(),'payloadSha256':digest,'architecture':arch,'build':build,'wrapperVersion':'22.1','dmgVerified':True,'mountedInstallerTest':'PASS','developerIDSigned':False,'notarized':False,'guiKeychainLoginAcceptance':'PENDING_USER_MAC'}
 (out/'DMG-MANIFEST.json').write_text(json.dumps(record,indent=2))
 (out/'SHA256SUMS-DMG.txt').write_text(record['sha256']+'  '+dmg.name+'\n')
 shutil.copy2(stage/'LEIA-ME — READ ME.txt',out/'INSTALL-DMG.txt')
