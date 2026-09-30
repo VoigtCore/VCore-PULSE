@@ -33,7 +33,7 @@ jobs:
       - name: Build and mount-test DMG
         env:
           VCORE_DMG_TARGET: ${{ matrix.target }}
-          VCORE_DMG_BUILD: 2026.09.30-release-candidate.21
+          VCORE_DMG_BUILD: 2026.09.30-release-candidate.22
           VCORE_DMG_PAYLOAD_SHA256: ${{ matrix.sha256 }}
         run: python3 tools/macos-dmg/build-dmg.py
       - name: Verify native Pulse runtime and lifecycle
