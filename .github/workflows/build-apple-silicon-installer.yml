@@ -1,0 +1,41 @@
+name: Build Apple Silicon installer
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  dmg:
+    runs-on: macos-14
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: 24.21.0
+      - name: Fetch existing verified Apple Silicon runtime
+        env:
+          PAYLOAD_SHA256: 58890bf3b834fa21447234785ff021c35ff3de19c817ba8affec2d6828399df3
+        run: |
+          curl --fail --location --output installer.sh https://github.com/VoigtCore/VCore-PULSE/releases/download/v2.2.0-build.22/VCorePulse-2.2.0-macos-arm64.sh
+          echo "$PAYLOAD_SHA256  installer.sh" | shasum -a 256 -c -
+      - name: Build, install in Applications and test after eject
+        env:
+          VCORE_DMG_TARGET: darwin-arm64
+          VCORE_DMG_BUILD: 2026.09.30-release-candidate.22
+          VCORE_DMG_WRAPPER_BUILD: '23'
+          VCORE_DMG_FILE_BUILD: '23'
+          VCORE_DMG_PAYLOAD_SHA256: 58890bf3b834fa21447234785ff021c35ff3de19c817ba8affec2d6828399df3
+        run: python3 tools/macos-dmg/build-dmg.py
+      - name: Verify unchanged native runtime and lifecycle
+        run: node tools/native-crypto/smoke-package.mjs
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: pulse-apple-silicon-installer23
+          path: |
+            dmg-output/
+            validation-output/
+          retention-days: 30
+          if-no-files-found: error
